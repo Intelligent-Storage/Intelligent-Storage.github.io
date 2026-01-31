@@ -1,0 +1,562 @@
+/* ===================================
+   RETROFUTURE 1950s THEME
+   Add this to public/css/custom.css
+   v72
+   =================================== */
+
+/* Import retro-futuristic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+/* Color Palette - Muted Retrofuture */
+:root {
+  --olive-gray: #4a4a3e;
+  --dark-olive: #3a3a30;
+  --retro-pink: #d4568c;
+  --golden-yellow: #d4a547;
+  --cream-beige: #e8dcc4;
+  --light-cream: #f5f0e8;
+  --muted-teal: #6b9fa3;
+  --soft-white: #faf8f5;
+}
+
+/* Body and Background */
+body {
+  background-color: var(--olive-gray);
+  background-image: 
+    radial-gradient(circle at 20% 30%, var(--cream-beige) 2%, transparent 3%),
+    radial-gradient(circle at 20% 30%, var(--cream-beige) 2%, transparent 3%),
+    radial-gradient(circle at 80% 70%, var(--cream-beige) 1.5%, transparent 2%);
+  background-size: 200px 200px, 100px 100px, 150px 150px;
+  background-position: 0 0, 50px 50px, 100px 100px;
+  font-family: 'Work Sans', -apple-system, sans-serif;
+  font-size: 15px;
+  color: var(--cream-beige);
+}
+
+/* Container */
+.container {
+  max-width: 48rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure sidebar wrapper works correctly */
+.wrap {
+  position: relative;
+}
+
+/* Fixed Background Image Layer */
+.page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeInBackground 0.8s ease-in forwards;
+}
+
+@keyframes fadeInBackground {
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* Masthead/Header */
+.masthead {
+  background: linear-gradient(135deg, var(--dark-olive) 0%, var(--olive-gray) 100%);
+  padding: 1.5rem 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid var(--retro-pink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 100;
+}
+
+.masthead .container {
+  text-align: center;
+}
+
+.masthead-title {
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.masthead-title a {
+  color: var(--cream-beige);
+  text-decoration: none;
+}
+
+.masthead-title a:hover {
+  color: var(--retro-pink);
+  border-bottom: none;
+}
+
+.masthead-title small {
+  font-family: 'Pacifico', cursive;
+  color: var(--retro-pink);
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 1;
+  text-transform: none;
+  font-size: 1.2rem;
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+/* Top Navigation Menu - Centered below title */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.top-nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.top-nav-link {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  color: var(--cream-beige);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.25rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.top-nav-link:hover,
+.top-nav-link.active {
+  color: var(--retro-pink);
+  border-bottom: 2px solid var(--golden-yellow);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--dark-olive);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  border: 2px solid var(--golden-yellow);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+.top-nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: var(--cream-beige);
+  padding: 0.75rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background: rgba(212, 86, 140, 0.2);
+  border-left: 3px solid var(--retro-pink);
+  color: var(--retro-pink);
+}
+
+/* Responsive: Keep navigation centered on all screen sizes */
+@media (max-width: 768px) {
+  .top-nav {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .top-nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+.masthead-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--cream-beige);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.masthead-title a {
+  color: var(--cream-beige);
+  text-decoration: none;
+}
+
+.masthead-title small {
+  font-family: 'Pacifico', cursive;
+  color: var(--retro-pink);
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 1;
+  text-transform: none;
+}
+
+/* Sidebar - Keep it visible and functional */
+.sidebar {
+  background: linear-gradient(180deg, var(--dark-olive) 0%, #2a2a22 100%) !important;
+  color: var(--cream-beige) !important;
+  border-right: 3px solid var(--golden-yellow) !important;
+  z-index: 200 !important;
+}
+
+.sidebar-about h1 {
+  font-family: 'Bebas Neue', sans-serif !important;
+  color: var(--retro-pink) !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  font-family: 'Work Sans', sans-serif !important;
+  color: var(--cream-beige) !important;
+  opacity: 0.9;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  border-top: 2px solid var(--golden-yellow) !important;
+  border-bottom: 2px solid var(--golden-yellow) !important;
+  padding: 1rem 0 !important;
+}
+
+.sidebar-nav-item {
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--cream-beige) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav-item:hover,
+.sidebar-nav-item:focus {
+  color: var(--retro-pink) !important;
+  text-decoration: none;
+  background-color: rgba(212, 86, 140, 0.1) !important;
+  border-left: 3px solid var(--retro-pink) !important;
+}
+
+.sidebar-nav-item.active {
+  color: var(--golden-yellow) !important;
+  font-weight: 700;
+  border-left: 3px solid var(--golden-yellow) !important;
+}
+
+/* Sidebar Subitems - More specific selector */
+.sidebar-nav-item.sidebar-nav-subitem {
+  padding-left: 2rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  opacity: 0.85 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.sidebar-nav-item.sidebar-nav-subitem:hover,
+.sidebar-nav-item.sidebar-nav-subitem:focus {
+  padding-left: 2.2rem !important;
+  font-weight: 500 !important;
+}
+
+/* Sidebar Navigation Groups with Hover Submenu */
+.sidebar-nav-group {
+  position: relative;
+}
+
+.sidebar-submenu {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.3s ease;
+}
+
+.sidebar-nav-group:hover .sidebar-submenu {
+  max-height: 300px !important;
+}
+
+/* Keep submenu open when on related page */
+.sidebar-nav-item.active ~ .sidebar-submenu,
+.sidebar-nav-group:has(.sidebar-nav-item.active) .sidebar-submenu {
+  max-height: 300px !important;
+}
+
+/* Toggle Sidebar Button - Make sure it's visible */
+.sidebar-toggle {
+  background-color: var(--retro-pink) !important;
+  border: 2px solid var(--dark-olive) !important;
+  box-shadow: 0 2px 6px rgba(212, 86, 140, 0.3) !important;
+  z-index: 300 !important;
+  position: fixed !important;
+}
+
+.sidebar-toggle:before {
+  background-image: linear-gradient(to bottom, var(--cream-beige), var(--cream-beige)) !important;
+}
+
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: var(--golden-yellow) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: var(--cream-beige);
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--retro-pink);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h1::before {
+  content: '✦ ';
+  color: var(--golden-yellow);
+  font-size: 0.7em;
+  margin-right: 0.5rem;
+}
+
+h2 {
+  color: var(--retro-pink);
+  border-left: 4px solid var(--golden-yellow);
+  padding-left: 1rem;
+  margin-top: 2rem;
+}
+
+/* Ensure headings in posts/pages are visible */
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6,
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6,
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: var(--dark-olive);
+}
+
+.post h2, .page h2, .content h2 {
+  color: var(--retro-pink);
+}
+
+/* Links */
+a {
+  color: var(--retro-pink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--golden-yellow);
+  border-bottom: 1px solid var(--golden-yellow);
+}
+
+/* Posts */
+.post {
+  background: var(--soft-white);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  border-top: 3px solid var(--retro-pink);
+  position: relative;
+  color: var(--dark-olive);
+}
+
+/* Pages - same styling as posts */
+.page {
+  background: var(--soft-white) !important;
+  padding: 2rem !important;
+  margin-bottom: 3rem !important;
+  border-radius: 4px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+  border-top: 3px solid var(--retro-pink) !important;
+  position: relative !important;
+  color: var(--dark-olive) !important;
+}
+
+.post-title {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--dark-olive);
+  margin-bottom: 0.5rem;
+}
+
+.post-title a {
+  color: var(--dark-olive);
+  border-bottom: none;
+}
+
+.post-title a:hover {
+  color: var(--retro-pink);
+}
+
+.post-date {
+  font-family: 'Work Sans', sans-serif;
+  color: #6a6a5a;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Make sure all post content is dark and readable */
+.post p, .post li, .post span, .post div {
+  color: var(--dark-olive);
+}
+
+/* Pagination */
+.pagination {
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pagination-item {
+  border: 2px solid var(--retro-pink);
+  background: var(--soft-white);
+  color: var(--retro-pink);
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.pagination-item:hover {
+  background: var(--retro-pink);
+  color: var(--soft-white);
+  border-color: var(--retro-pink);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--golden-yellow);
+  background: linear-gradient(to right, rgba(212, 165, 71, 0.1), transparent);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  position: relative;
+  color: var(--dark-olive);
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+blockquote::before {
+  content: '❝';
+  position: absolute;
+  left: -0.5rem;
+  top: -1rem;
+  font-size: 2.5rem;
+  color: var(--golden-yellow);
+  opacity: 0.4;
+}
+
+/* Code blocks */
+code {
+  background-color: rgba(212, 165, 71, 0.15);
+  border: 1px solid var(--golden-yellow);
+  color: var(--dark-olive);
+  font-family: 'Courier New', monospace;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--dark-olive);
+  border: 2px solid var(--retro-pink);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  color: var(--cream-beige);
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--golden-yellow), transparent);
+  margin: 2rem 0;
+}
+
+/* Page content styling for readability */
+.page, .content {
+  color: var(--dark-olive);
+}
+
+.page p, .page li, .page span, .page div,
+.content p, .content li, .content span, .content div {
+  color: var(--dark-olive);
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 2px solid var(--golden-yellow);
+  margin-top: 3rem;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--cream-beige);
+  opacity: 0.8;
+}
+
+/* Add some retro-future flair to lists */
+ul, ol {
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Related posts section */
+.related {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(212, 165, 71, 0.1), rgba(212, 86, 140, 0.1));
+  border-radius: 4px;
+  border: 2px dashed var(--muted-teal);
+}
+
+.related-posts li {
+  border-left: 3px solid var(--golden-yellow);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}

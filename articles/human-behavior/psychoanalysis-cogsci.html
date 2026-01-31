@@ -1,0 +1,106 @@
+---
+layout: default
+title: Was Freud's Imagination Right?
+permalink: /articles/human-behavior/psychoanalysis-cogsci/
+tag: psychoanalysis-cogsci
+---
+
+<div class="page">
+  <h1 style="text-align: center; margin-bottom: 1rem;">✦ {{ page.title }}</h1>
+  
+  <p style="text-align: center; font-size: 1.1em; margin-bottom: 3rem; color: #6a6a5a;">
+    Exploring the modern discourse between psychoanalysis and cognitive science
+  </p>
+
+  <div class="posts-list">
+    {% assign topic_posts = site.tags[page.tag] %}
+    {% if topic_posts and topic_posts.size > 0 %}
+      {% assign sorted_posts = topic_posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts %}
+        <article class="topic-post">
+          <h2 class="topic-post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <time class="topic-post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+          
+          {% if post.excerpt %}
+            <div class="topic-post-excerpt">
+              {{ post.excerpt }}
+            </div>
+          {% endif %}
+          
+          <a href="{{ post.url | relative_url }}" class="read-more-link">Read article →</a>
+        </article>
+      {% endfor %}
+    {% else %}
+      <div style="text-align: center; padding: 3rem; color: #6a6a5a; font-style: italic;">
+        <p style="font-size: 1.2em; margin-bottom: 1rem;">No articles yet in this series.</p>
+        <p>Check back soon for new content!</p>
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+
+<style>
+  .posts-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .topic-post {
+    background: var(--soft-white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--retro-pink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .topic-post-title {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .topic-post-title a {
+    color: var(--dark-olive);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .topic-post-title a:hover {
+    color: var(--retro-pink);
+    border-bottom: 2px solid var(--retro-pink);
+  }
+
+  .topic-post-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #8a8a7a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .topic-post-excerpt {
+    line-height: 1.7;
+    color: var(--dark-olive);
+    margin-bottom: 1rem;
+  }
+
+  .read-more-link {
+    display: inline-block;
+    color: var(--retro-pink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .read-more-link:hover {
+    border-bottom: 2px solid var(--retro-pink);
+  }
+</style>

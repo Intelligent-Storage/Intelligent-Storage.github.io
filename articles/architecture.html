@@ -1,0 +1,100 @@
+---
+layout: default
+title: Architecture
+permalink: /articles/architecture/
+---
+
+<div class="page">
+  <h1 style="text-align: center; margin-bottom: 1rem;">Architecture</h1>
+  
+  <p style="text-align: center; font-size: 1.1em; margin-bottom: 3rem; color: #6a6a5a;">
+    Examining buildings and spatial experiences - real and virtual
+  </p>
+
+  <div class="article-grid">
+    <!-- Modernized Georgian Farm House -->
+    <a href="{{ '/articles/architecture/modern-georgian-farmhouse/' | relative_url }}" class="article-card" style="background-image: url('{{ '/images/articles/architecture/modern-georgian-farmhouse.png' | relative_url }}');">
+      <h3 class="article-card-title">Modernized Georgian Farm House</h3>
+    </a>
+  </div>
+
+</div>
+
+<style>
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  .article-card {
+    background: var(--soft-white);
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 250px;
+    aspect-ratio: 0.7;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .article-card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--retro-pink);
+    box-shadow: 0 8px 20px rgba(212, 86, 140, 0.3);
+  }
+
+  .article-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 35%, transparent 100%);
+    z-index: 1;
+  }
+
+  .article-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF !important;
+    margin: 0;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  /* Responsive: Stack on smaller screens */
+  @media (max-width: 768px) {
+    .article-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .article-card {
+      min-height: 180px;
+    }
+  }
+
+  /* Responsive: 2 columns on tablets */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

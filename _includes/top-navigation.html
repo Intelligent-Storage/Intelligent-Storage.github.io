@@ -1,0 +1,26 @@
+<nav class="top-nav">
+  <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url == '/posts/' %} active{% endif %}" href="{{ '/posts/' | relative_url }}">Posts</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url contains '/articles' %} active{% endif %}" href="{{ '/articles/' | relative_url }}">Articles</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url contains '/projects' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url contains '/book-reviews' %} active{% endif %}" href="{{ '/book-reviews/' | relative_url }}">Book Reviews</a>
+  </div>
+  
+    <div class="top-nav-item">
+    <a class="top-nav-link{% if page.url contains '/gallery' %} active{% endif %}" href="{{ '/gallery/' | relative_url }}">Gallery</a>
+  </div>
+  
+</nav>

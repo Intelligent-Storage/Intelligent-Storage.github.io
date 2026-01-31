@@ -1,0 +1,63 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.title == 'Home' or page.url == '/' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
+    
+    <!-- Main navigation pages (excluding home) -->
+    {% assign pages_list = site.pages | sort:"url" %}
+    {% for node in pages_list %}
+      {% if node.title != null and node.url != '/' %}
+        {% if node.layout == "page" or node.layout == "page-with-background" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    <a class="sidebar-nav-item{% if page.url == '/posts/' %} active{% endif %}" href="{{ '/posts/' | absolute_url }}">Posts</a>
+    
+    <!-- Articles Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item{% if page.url contains '/articles' %} active{% endif %}" href="{{ '/articles/' | absolute_url }}">Articles</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/human-behavior' %} active{% endif %}" href="{{ '/articles/human-behavior/' | absolute_url }}">→ Human Behavior</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/architecture' %} active{% endif %}" href="{{ '/articles/architecture/' | absolute_url }}">→ Architecture</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/design-gear' %} active{% endif %}" href="{{ '/articles/design-gear/' | absolute_url }}">→ Design + Gear Review</a>
+      </div>
+    </div>
+    
+    <!-- Projects Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item{% if page.url contains '/projects' %} active{% endif %}" href="{{ '/projects/' | absolute_url }}">Projects</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/logic-scientific-method' %} active{% endif %}" href="{{ '/projects/logic-scientific-method/' | absolute_url }}">→ Logic & Scientific Method</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/self-change' %} active{% endif %}" href="{{ '/projects/self-change/' | absolute_url }}">→ Self-Change</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem{% if page.url contains '/mapping-maneuvers' %} active{% endif %}" href="{{ '/projects/mapping-maneuvers/' | absolute_url }}">→ Mapping Maneuvers</a>
+      </div>
+    </div>
+    
+    <!-- Book Reviews Section -->
+    <a class="sidebar-nav-item{% if page.url contains '/book-review' %} active{% endif %}" href="{{ '/book-reviews/' | absolute_url }}">Book Reviews</a>
+    
+    <!-- Gallery Section -->
+    <a class="sidebar-nav-item{% if page.url contains '/gallery' %} active{% endif %}" href="{{ '/gallery/' | absolute_url }}">Gallery</a>    
+    
+    <!-- Stories Section -->
+    <a class="sidebar-nav-item{% if page.url contains '/stories' %} active{% endif %}" href="{{ '/stories/' | absolute_url }}">Stories</a>
+    
+    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>
