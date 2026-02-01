@@ -1,18 +1,92 @@
 ---
 layout: post
-title: "FILBE AP vs Kahakka"
+title: "Design Review: FILBE Assault Pack vs Kahakka"
 date: 2026-02-01
 tags: [design-gear]
 permalink: /articles/design-gear/filbe-vs-kahakka/
 ---
 
+## Assault Pack Design Review (Europe vs America)
+
+This is a comparative design and quality review of the [FILBE Assault Pack (AP)] (https://www.propper.com/usmc-assault-pack.html), used
+by the United States Marine Core (USMC), and the [Savotta Kahakka Backpack](https://www.savotta.fi/products/kahakka-25l), a commercial
+version of the [M20 pack](https://puolustusvoimat.fi/en/equipment/-/cat/asset/view/id/1905) used by Finnish Defense Forces (FDF). 
+
+While characterizing this as an <span class="footnote-ref">"Europe vs America" is a bit unfair,<span class="footnote-tooltip">It is unfair because 1)The Kahakka is made for commercial sale 2) It is not clear what material and quality control differences exist between commericial variants for both packs and 3) Different manufactuers (Propper vs Eagle Industries) may have different quality and 4) Propper and Savotta don't make all the backpacks (or equipment) for all of American and Finish armed forces. </span></span>
+it is still worthwhile to compare the design considerations and build quality between products fulfilling similar roles across the Atlantic.
+I do believe noted differences capture cultural and stereotypes of the countries (USA vs Finland) in question.
+
+Testing duration: Both of these backpacks have been tested for at least 1 year.
+
+Relevant Experience: I have never been in combat. While I try not to give scholastic and 
+professional details about myself, I have solid engineering and user design experience.
+
+
+This is a critical review, with extensive detail. You have been warned.
+
+The principal considerations are: 
+
+1. Everyday Carry Use (EDC)
+2. Combat Usage
+3. Manufacturing and Quality
 
 
 
+## Summary of differences (TLDR)
+
+The FILBE is bigger and heavier, capturing the American design ethos. The Kahakka
+is smaller and leaner, demonstrating the European one.
+
+For everyday and short-term combat usage, the _design_ of the FILBE is superior. The FILBE's
+simple compartment system ensures quick and effective organization. Its J-Zip provides
+great ease-of-access. In contrast, the Kahakka's black PU inner lining makes visibility
+inside the pack challenging, and the flap-closure is inconvenient, especially for
+items at the bottom of the pack. For long term combat usage and poor weather, the 
+Kahakka's _design_ may be better because of improved defenses against the elements, excepting
+a lack of drainage grommets.
+
+The FILBE is more comfortable with heavier loads due to wider, softer straps. It is
+cooler on the back because of the dual-channel padding. This advantage is however negated
+while wearing a plate carrier. For travel, the Kahakka is 0.5 kg lighter. Notably, 
+the actual body height is only 40cm, meaning if not overstuffed, it meets RyanAir's 
+small bag dimensions (40x30x20cm). The FILBE (48 cm) will require bending if tested.
+
+While aesthetics are mostly opinion, it can affect every day carry and how others
+react to you. The FILBE clearly carries a military air,
+while the Kahakka less so. I have been prevented from entering certain museums
+and areas of interest while wearing the FILBE, although this was during the
+European Terror waves (2015-2017), before the Kahakka existed. I think it is less
+likely I would have been stopped with the Kahakka, but still possible.
+
+The build quality of the Kahakka is simply superior - both in terms of material
+quality and build quality. The manufacturing quality of the FILBE has, in my
+limited experience, significantly regressed since its release.
 
 
 
-## BELOW IS DRAFT
+## Introduction to the packs
+
+If you're here, you very likely have an interest in at least one of these bags.
+Therefore, I'll be concise.
+
+<div style="display: flex; gap: 10px;">
+  <img src="/images/articles/design-review/filbe-kahakka/FILBE-Propper.jpg" alt="Image 1" style="width: 33%;">
+  <img src="/images/articles/design-review/filbe-kahakka/kahakka-savotta.png" alt="Image 2" style="width: 33%;">
+  <img src="/images/articles/design-review/filbe-kahakka/M20.jpg" alt="Image 3" style="width: 33%;">
+</div>
+
+The Family of Improved Load Bearing Equipment (FILBE) Assault Pack was first fielded
+by the USMC sometime in [2011-2012](https://www.militarytimes.com/off-duty/gearscout/kit/2020/02/11/looking-for-a-kickass-new-backpack-consider-the-tried-and-true-marine-corps-filbe/).
+As of 02/2026 (right now), it is still the AP in service for the USMC. It was produced by both
+Eagle Industries and Propper International. Only in late 2024 did it become available for
+consumer purchase by Propper. However, it was available as military surplus as early
+as 2013-2014.
+
+The Kahakka was released in 2024, making it some 12 years younger. It is based on
+the the FDF's M20 pack, [with learnings from the 2022 Russian invasion of Ukraine.](https://www.savotta.fi/pages/kahakka-backpack-origins)
+
+
+# BELOW IS A DRAFT
 
 ## A Comparative Review with the USMC FILBE Assault Pack (Europe vs America)
 
