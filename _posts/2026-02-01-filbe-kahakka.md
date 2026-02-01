@@ -1,10 +1,18 @@
 ---
 layout: post
-title: "Savotta Kahakka 25L"
+title: "FILBE AP vs Kahakka"
 date: 2026-02-01
-categories: [gear-reviews]
-tags: [FILBE-ASSAULT-PACK, SAVOTTA-KAHAKKA, Savotta-Kahakka-25L]
+tags: [design-gear]
+permalink: /articles/design-gear/filbe-vs-kahakka
 ---
+
+
+
+
+
+
+
+## BELOW IS DRAFT
 
 ## A Comparative Review with the USMC FILBE Assault Pack (Europe vs America)
 
