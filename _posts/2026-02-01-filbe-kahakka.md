@@ -3,7 +3,7 @@ layout: post
 title: "FILBE AP vs Kahakka"
 date: 2026-02-01
 tags: [design-gear]
-permalink: /articles/design-gear/filbe-vs-kahakka
+permalink: /articles/design-gear/filbe-vs-kahakka/
 ---
 
 
