@@ -413,18 +413,25 @@ a:focus {
   color: var(--dark-olive) !important;
 }
 
-.post-title {
+.post-title, .page-title {
   font-family: 'Bebas Neue', sans-serif;
   color: var(--dark-olive);
   margin-bottom: 0.5rem;
+  text-align: center;  /* Added this line */
 }
 
-.post-title a {
+/* Also center h1 tags in posts and pages */
+.page h1:first-child,
+.post h1:first-child {
+  text-align: center;
+}
+
+.post-title a, .page-title a {
   color: var(--dark-olive);
   border-bottom: none;
 }
 
-.post-title a:hover {
+.post-title a:hover, .page-title a:hover {
   color: var(--retro-pink);
 }
 
@@ -559,4 +566,59 @@ li {
   border-left: 3px solid var(--golden-yellow);
   padding-left: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Footnote Tooltips */
+.footnote-ref {
+  position: relative;
+  color: var(--retro-pink);
+  cursor: help;
+  border-bottom: 1px dotted var(--retro-pink);
+  font-weight: 600;
+}
+
+/* Footnote Tooltips */
+.footnote-ref {
+  position: relative;
+  color: var(--retro-pink);
+  cursor: help;
+  border-bottom: 1px dotted var(--retro-pink);
+  font-weight: 600;
+}
+
+.footnote-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  background-color: var(--dark-olive);
+  color: var(--cream-beige) !important;
+  border: 2px solid var(--golden-yellow);
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 400;
+  width: 350px;
+  text-align: left;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.footnote-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--golden-yellow);
+}
+
+.footnote-ref:hover .footnote-tooltip {
+  visibility: visible !important;
+  display: block !important;
 }

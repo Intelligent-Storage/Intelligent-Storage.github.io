@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Assault Pack Design Review: <br> FILBE vs Kahakka &middot; Intelligent Storage
+    
+  </title>
+
+  
+  <link rel="canonical" href="http://localhost:4000/articles/design-gear/filbe-vs-kahakka/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/Thinker.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/Thinker.png">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+
+  <link rel="stylesheet" href="/public/css/custom.css">
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+    
+    <!-- Main navigation pages (excluding home) -->
+    
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/articles/">Articles</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+        
+      
+    
+      
+        
+      
+    
+    
+    <a class="sidebar-nav-item" href="http://localhost:4000/posts/">Posts</a>
+    
+    <!-- Articles Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item active" href="http://localhost:4000/articles/">Articles</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/human-behavior/">→ Human Behavior</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/architecture/">→ Architecture</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem active" href="http://localhost:4000/articles/design-gear/">→ Design + Gear Review</a>
+      </div>
+    </div>
+    
+    <!-- Projects Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/logic-scientific-method/">→ Logic & Scientific Method</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/self-change/">→ Self-Change</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/mapping-maneuvers/">→ Mapping Maneuvers</a>
+      </div>
+    </div>
+    
+    <!-- Book Reviews Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/book-reviews/">Book Reviews</a>
+    
+    <!-- Gallery Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/gallery/">Gallery</a>    
+    
+    <!-- Stories Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/stories/">Stories</a>
+    
+    <span class="sidebar-nav-item">Currently v1.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2026. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Intelligent Storage</a>
+            <small>Cultivating sensitivity to difficulties</small>
+          </h3>
+          <nav class="top-nav">
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/about/">About</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/posts/">Posts</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link active" href="/articles/">Articles</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/projects/">Projects</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/book-reviews/">Book Reviews</a>
+  </div>
+  
+    <div class="top-nav-item">
+    <a class="top-nav-link" href="/gallery/">Gallery</a>
+  </div>
+  
+</nav>
+
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Assault Pack Design Review: <br> FILBE vs Kahakka</h1>
+  <span class="post-date">01 Feb 2026</span>
+  <h2 style="text-align: center;"> Propper International FILBE vs Savotta Kahakka 25L<br /> America vs Europe </h2>
+
+<div style="margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(99, 179, 237, 0.08), rgba(139, 92, 246, 0.08)); border-radius: 8px; border-left: 4px solid #63b3ed;">
+
+<p><b>Article Description:</b> This is an in-depth gear review of two "military" backpacks (American and Finnish). From here on, it'll get more technical and critical. You've been warned.</p>
+
+<p>This is a comparative design and quality review of the <a href="https://www.propper.com/usmc-assault-pack.html">FILBE Assault Pack (AP)</a>, used
+by the United States Marine Core (USMC), and the <a href="https://www.savotta.fi/products/kahakka-25l">Savotta Kahakka 25L Backpack</a>, a commercial
+version of the <a href="https://puolustusvoimat.fi/en/equipment/-/cat/asset/view/id/1905">M20 pack</a> used by Finnish Defense Forces (FDF).</p>
+
+</div>
+
+<div style="display: flex; gap: 10px;">
+  <div style="width: 33%; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/FILBE-Propper.jpg" alt="Image 1" style="width: 100%; height: 300px; object-fit: contain;" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Propper FILBE</p>
+  </div>
+  <div style="width: 33%; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/kahakka-savotta.png" alt="Image 2" style="width: 100%; height: 300px; object-fit: contain; transform: scale(1.3);" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Savotta Kahakka</p>
+  </div>
+  <div style="width: 33%; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/M20.jpg" alt="Image 3" style="width: 100%; height: 300px; object-fit: contain; transform: scale(1.1);" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Savotta M20</p>
+  </div>
+</div>
+
+<p><br /></p>
+
+<p style="text-align: center;"><b>How do two military assault packs, <br /> one from the USA's defense powerhouse, <br /> the other born from Finland's sisu, <br /> measure up?</b></p>
+<p><br /></p>
+
+<p>While characterizing this as an <span class="footnote-ref"> “Europe vs America” is a bit unfair,<span class="footnote-tooltip"> It may be unfair because: <br /> 1)The Kahakka is made for commercial, not military sale <br /> 2) Different manufactures (Propper vs Eagle Industries) may have differing qualities, independent of home country <br /> 3) Propper and Savotta don’t make all the backpacks (or equipment) for all of American and Finish armed forces. </span></span>
+it is still worthwhile to compare the design considerations and build quality between products fulfilling similar roles across the Atlantic.
+Some of the noted findings do seem to highlight the cultural and stereotypical differences between the countries (USA vs Finland) in question.</p>
+
+<p><b>Testing duration:</b> Both of these backpacks have been tested for at least 1 year.</p>
+
+<p><b>Relevant Experience:</b> I have never been in combat. I have played a lot of milsim sports. I have solid engineering and user design experience.</p>
+
+<p><b>The principal considerations are:</b></p>
+
+<ol>
+  <li>Everyday Carry Use (EDC)</li>
+  <li>Combat Usage (CU)</li>
+  <li>Manufacturing and Quality</li>
+</ol>
+
+<p>I will refer to each pack as the <span class="footnote-ref"> FILBE <span class="footnote-tooltip">Typically, FILBE refers to the main rucksack (80L) in the FILBE system, not the assault pack. Here I will just refer to it as the FILBE.</span></span>and Kahakka from here on.</p>
+
+<h2 id="summary-of-differences-tldr">Summary of differences (TLDR)</h2>
+
+<div style="margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(99, 179, 237, 0.08), rgba(139, 92, 246, 0.08)); border-radius: 8px; border-left: 4px solid #63b3ed;">
+
+<p> <span class="footnote-ref"> The FILBE is bigger and heavier,<span class="footnote-tooltip"> The FILBE has a larger volume, even if the tech specs say otherwise.</span></span> capturing the American design ethos. The Kahakka
+is smaller and leaner, demonstrating the European one.
+</p>
+
+<p> For everyday and short-term combat usage, the <i>design</i> of the FILBE is superior. The FILBE's
+simple compartment system ensures quick and effective organization. Its J-Zip provides
+great ease-of-access. In contrast, the Kahakka's top flap closure is inconvenient, especially for items
+at the bottom of the pack. The hunter's green PU inner lining makes visibility in the compartment
+difficult. For long term combat usage and poor weather, the 
+Kahakka's design <i>may be</i> better because of improved defense against the elements,
+excepting a lack of drainage grommets.
+</p>
+
+<p>The FILBE is more comfortable with heavier loads due to wider, better padded straps. It is
+cooler on the back because of the dual-channel padding. This advantage is negated
+while wearing a plate carrier. For travel, the Kahakka is 0.5 kg lighter. Notably, 
+the actual body height is only 40cm (not the advertised 48cm), meaning if not overstuffed, it meets RyanAir's 
+small bag dimensions (40x30x20cm). The FILBE (~51 cm) will require bending if tested.
+</p>
+
+
+<p>While aesthetics are mostly opinion, it can affect every day carry and how others
+react to you. The FILBE clearly carries a military air,
+while the Kahakka less so. I have been prevented from entering certain museums
+and areas of interest while wearing the FILBE, although this was during the
+European Terror waves (2015-2017). I think it is less
+likely I would have been stopped with the Kahakka, but still possible.
+</p>
+
+<p>The <i>quality</i> of the Kahakka is simply superior - both in terms of material
+ and build. The manufacturing quality of the FILBE has, in my
+limited experience, significantly regressed since its release.
+</p>
+
+
+<p>For EDC, where I must access items readily, the FILBE is the clear choice. For hiking,
+the decision comes down to season, and carry needs. In hot weather or heavy carry loads,
+the FILBE is my choice. For cold weather and general travel, the Kahakka is better.
+</p>
+
+</div>
+
+<h2 id="introduction-and-history">Introduction and History</h2>
+
+<p>If you’re here, you likely already have an interest in at least one of these bags.
+Therefore, I’ll be concise with the history.</p>
+
+<p>The Family of Improved Load Bearing Equipment (FILBE) Assault Pack (AP) was first fielded
+by the USMC sometime in <a href="https://www.militarytimes.com/off-duty/gearscout/kit/2020/02/11/looking-for-a-kickass-new-backpack-consider-the-tried-and-true-marine-corps-filbe/">2011-2012</a>.
+As of 02/2026 (right now), it is still the AP in service for the USMC. It was produced by both
+Eagle Industries and Propper International. Only in late 2024 did it become available for
+consumer purchase from Propper. However, it was available as military surplus as early
+as 2013-2014.</p>
+
+<p>The Kahakka was released to the consumer market in 2024, making it some 12 years younger. It is based on
+the the FDF’s M20 pack, <a href="https://www.savotta.fi/pages/kahakka-backpack-origins">with learnings from the 2022 Russian invasion of Ukraine.</a></p>
+
+<h2 id="why-i-care-so-much-about-this-and-why-it-matters-to-you">Why I care so much about this (and why it matters to you!)</h2>
+
+<p>I had the same backpack for 9 years (RIP 2015-2024). It was used at least as many days as I’ve had it, probably more.</p>
+
+<p>Sometimes it hardly carried anything but papers, other times it was stuffed to the brim, camping gear strapped to the side.
+It was with me as I rode the métro and walked the streets of Paris to university. It was with me when I reached the foot of
+the glaciers on Mont Blanc. It’s seen the beaches on both sides of the Atlantic, and beaches on both 
+sides of the Mediterranean, not forgetting Corsica in the middle. It’s been over the Alps, Apennines, Appalachians, 
+Blue Stacks and Derryveaghs, and even graced the Lake District. It’s survived a dozen different farms, 
+carried books into at least 4 different universities, and <em>most importantly</em>, had a pocket just for holding a fresh baguette.</p>
+
+<p><br /></p>
+<p style="text-align: center;"><b>That pack was the FILBE</b></p>
+<p><br /></p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/filbe-3.jpg" alt="FILBE Assault Pack with Mont Blanc" style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Assault Pack with a backdrop of Mont Blanc, Europe's tallest mountain.</p>
+</div>
+
+<p>When you’ve carried something like that for so long, it becomes a part of you, and an icon of yourself. Folks recognize you
+just by its silhouette. When I tested other bags, my friends didn’t like it. “You should get a new one of the same bag. It’s
+like it’s not you anymore,” they said.</p>
+
+<p><br /></p>
+<p style="text-align: center;"><b>And, I didn't <i>really</i> want a new bag</b></p>
+<p><br /></p>
+
+<p>Unfortunately, after 9 years of wear-and-tear, my original FILBE needed to be
+replaced. It wasn’t so much the standard usage which got it, but an early accident.
+I left it against a radiator in a caravan (that wasn’t supposed to work), waking
+during the middle of the night to the odor of burning plastic. The melted holes
+became weak points no patching seemed to resolve. Eventually, one huge tear
+formed at the top of the bag, perpetually letting in rain.</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_134519.jpg" alt="The rip" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">The rip</p>
+</div>
+
+<p><br /></p>
+<p style="text-align: center;"><b>It was time for a new bag - but which?</b></p>
+<p><br /></p>
+
+<p>Whatever replacement pack came, it would be would have big shoes to 
+fill. My FILBE had been part of my life for just shy of a decade. I knew it inside
+and out.</p>
+
+<p>Buying a new one seemed the obvious choice. But, a new FILBE direct from Propper
+would cost $180. Used ones could be had for much less. “Like-new” ones however
+were not acceptably cheaper to risk getting <span class="footnote-ref">one with holes<span class="footnote-tooltip">It was not possible at the time to physically visit a military surplus store that might have one for physical inspection.</span></span>, likely leading to the
+same demise as the previous.</p>
+
+<p>So, I cared a lot about getting a new pack, and the right one. And it matters because
+whatever pack would come next would have to meet high standards.</p>
+
+<p><br /></p>
+<p style="text-align: center;"><b>Enter the Kahakka</b></p>
+<p><br /></p>
+
+<p>At about this time, I was interested in <a href="https://www.roadtovostok.com/">The Road to Vostok</a>,
+an indie game (still in the making as of 02/2026) whose fictional Finnish setting somewhat mirrors
+that of the Chornobyl and Pripyat Exclusion zones in Ukraine (and similarly is 
+taken advantage of by the <a href="https://www.stalker2.com/en">STALKER</a> video game series). 
+It also at that time that Road to Vostok gained its first commercial collaborator:
+Savotta.</p>
+
+<p><strong><a href="https://www.savotta.fi/">Savotta</a></strong> is a well-known Finnish supplier of outdoor gear, for both military, 
+police, and recreational use in “extreme-environments.”</p>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/pOTDmiEPA5A?start=181" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="max-width: 100%;"></iframe>
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">"We are Savotta and we make military gear"</p>
+</div>
+
+<p><br /></p>
+<p style="text-align: center;"><b>If that doesn't convince you to buy one of their products (or want to be Finnish), well then, you're clearly not me.</b></p>
+<p><br /></p>
+
+<p>Although it was more expensive than purchasing a new FILBE, I decided to take the plunge.
+I purchased my Kahakka for €185 or $205 (purchased at 10% discount) back in October of 2024 .
+I would also end up purchasing a new FILBE for the price of $180 a few months later.</p>
+
+<h2 id="technical-specifications">Technical Specifications</h2>
+
+<p>Comparison table of tech specs. Skip this if too much detail:</p>
+
+<p>Below is a detailed specifications comparison of the FILBE vs Kahakka. Color coded pieces depict my opinion based on experience. It does not highlight where one pack is better or worse than the other, though this is usually the case, but it highlights implementations better or worse than “standard”.</p>
+
+<p><strong>Guide:</strong><br />
+<span style="color: blue;"><strong>Blue</strong>: Very Good</span><br />
+<strong>Black</strong>: Standard, Acceptable<br />
+<span style="color: #d4a017;"><strong>Yellow</strong>: Questionable or Uncertain</span><br />
+<span style="color: red;"><strong>Red</strong>: Bad</span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>FILBE Assault Pack</strong></th>
+      <th><strong>Savotta Kahakka 25L</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Year, Dimensions, Materials</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Initial Production Year</strong></td>
+      <td>2011-2012</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td><strong>Weight</strong></td>
+      <td><span style="color: red;">1.77kg (3.90 lbs)</span></td>
+      <td><span style="color: blue;">1.30 kg (2.87 lbs)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Size (L)</strong></td>
+      <td>Main: 23 L<br />Patch Pocket: 6 L<br />Total Estimated: <span class="footnote-ref">29L* (35L)<span class="footnote-tooltip"> 29L is according to documentation. 35L is estimated by both myself and The Outdoor Gear View </span></span></td>
+      <td>Main: 25L<br />Side Pouches (x2) = 3L<br />Total Estimated: 31 L</td>
+    </tr>
+    <tr>
+      <td><strong>Height</strong> (minimum)</td>
+      <td>50.8 cm (20 in)</td>
+      <td>48 cm (18.9 in)</td>
+    </tr>
+    <tr>
+      <td><strong>Width</strong></td>
+      <td><span style="color: red;">35.6 cm (14 in)</span></td>
+      <td><span style="color: blue;">27.5 cm (10.8 in) (with empty side pouches)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Depth</strong> (maximum)</td>
+      <td>20.3 (8 in)</td>
+      <td>19 cm (7.5 in)</td>
+    </tr>
+    <tr>
+      <td><strong>Material</strong></td>
+      <td><span style="color: #d4a017;">600 D Nylon</span></td>
+      <td><span style="color: blue;">1000D Cordura, 500D Cordura for back fabric</span></td>
+    </tr>
+    <tr>
+      <td><strong>Compartment and Pockets</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Pockets</strong></td>
+      <td><span style="color: blue;">1 Patch Pocket (6L) containing: {1 Flat Mesh Pocket}<br />Inside Main: {1 Flat Mesh Pocket<br />1 Large Canteen Pocket<br />1 Small Canteen Pocket<br />1 Zippered Back Plate Pocket}</span></td>
+      <td><span style="color: #d4a017;">1 Patch Pocket (very small)<br />1 Flat Pocket (small)<br />2 Expandable Side Pouches (3L)<br />Open Top Back Plate Pocket</span></td>
+    </tr>
+    <tr>
+      <td><strong>Main Compartment Opening</strong></td>
+      <td><span style="color: blue;">J Zipper</span></td>
+      <td><span style="color: #d4a017;">Fold Top Lid</span></td>
+    </tr>
+    <tr>
+      <td><strong>Interior Compartment Lining</strong></td>
+      <td>No</td>
+      <td><span style="color: blue;">Yes (Black PU Material)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Radio / Water Bladder Pouch</strong></td>
+      <td>Yes (Strap)</td>
+      <td><span style="color: #d4a017;">Yes (Elastic Band)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Water Bladder Hanger</strong></td>
+      <td><span style="color: red;">No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Drainage Grommets</strong></td>
+      <td><span style="color: blue;">Yes</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Straps, Buckles, and Zippers</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Side Straps</strong> / <strong>Compression Straps</strong></td>
+      <td><span style="color: blue;">2 Straps (Quick Release Buckle)</span></td>
+      <td>2 Straps (G-Hooks)</td>
+    </tr>
+    <tr>
+      <td><strong>Bottom Compression Straps</strong></td>
+      <td>Yes (Quick Release Buckle)</td>
+      <td>Yes (QR Buckle, clips to main lid)</td>
+    </tr>
+    <tr>
+      <td><strong>Shoulder Strap Quick Release</strong></td>
+      <td><span style="color: blue;">Yes (Quick Release Buckle)</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Type</strong></td>
+      <td>Quick Release</td>
+      <td>Berg Buckle Belt</td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Height</strong></td>
+      <td>~40mm</td>
+      <td>50mm</td>
+    </tr>
+    <tr>
+      <td><strong>Zipper Protection</strong></td>
+      <td><span style="color: blue;">Rubberized Cover (possibly Aquaguard by YKK)</span></td>
+      <td>Zipper Flaps (i.e. fabric covering)</td>
+    </tr>
+    <tr>
+      <td><strong>BackPlate</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Removable Back Plate Insert</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Standard Back Plate Insert</strong></td>
+      <td>Rigid Plastic Insert x2<br />Parallel 1cm Closed Cell Foam Strips</td>
+      <td>1 cm Closed Cell Foam</td>
+    </tr>
+    <tr>
+      <td><strong>Easy Access to Back Plate</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Other (NIR, NATO)</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Near Infrared Reduction Compliant</strong></td>
+      <td><span style="color: #d4a017;"><span class="footnote-ref">Probable<span class="footnote-tooltip">Probably because I can’t find confirmation, except for updated webbing for the FILBE which is marketed as being NIR compliant. It may be newer production is NIR compliant as this wasn’t important a decade ago.</span></span></span></td>
+      <td><span style="color: blue !important;">Confirmed</span></td>
+    </tr>
+    <tr>
+      <td><strong>NATO Stock Number (NSN)</strong></td>
+      <td>8465-01-600-7911</td>
+      <td>8465-58-002-0196</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="first-impressions">First Impressions</h2>
+
+<p>(Note: 02/2026 - will update with comparison photos of the 2025 FILBE and 2024 Kahakka)</p>
+
+<div style="margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(99, 179, 237, 0.08), rgba(139, 92, 246, 0.08)); border-radius: 8px; border-left: 4px solid #63b3ed;">
+
+The first time I saw the Kahakka, side by side with the FILBE, I thought,
+"…and <i><b>this</b></i> is the difference between America and Europe."
+
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241020_145923-1.jpg" alt="Front View" style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Front View</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241020_145928.jpg" alt="Right Side View" style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Right Side View – Hole on top of the FILBE is partly visible</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241020_145959.jpg" alt="Top-Front View" style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Top-Front View – The hole in the top of the FILBE is partly visible</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241020_150018.jpg" alt="Back View" style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Back View – Age related fraying on the FILBE is visible</p>
+</div>
+
+<p>Traveling between the USA and Europe tends to result in what I call
+<b>“<a href="https://en.wikipedia.org/wiki/Aspect_ratio_(image)#:~:text=The%20aspect%20ratio%20of%20an,3%3A2%20in%20still%20photography.">aspect ratio</a> shock.”</b>
+It’s akin to changing the aspect ratio on your TV, like 16:10 to 4:3, in an 
+instant - just with real life. I haven’t heard anyone else get this sensation,
+but if you do, it’d be nice to know I’m not alone.</p>
+
+<p>If you go from Europe to the USA, maybe for the first time or in a long while, 
+it suddenly feels like everything has gotten flattened and horizontally expanded. The roads
+are so wide that a “single lane” in American suburbia feels equivalent to a rural
+double lane in the European countryside. Even the landscapes themselves seem to stretch
+out further.</p>
+
+<p>Going to Europe from the USA is the opposite. Everything becomes taller and 
+skinnier. Older European continental homes have such high ceilings that jumping
+does not permit touching them (for any normal person). In Europe, everything seems
+thinner - from the fencing to the sign posts - because it is. Just look at the
+difference between American and European printing paper formats. Americans love
+their 8.5″x10″ sheets, and Europeans their 8.3″x11.7″.</p>
+
+<p>More generally, American products are heavier, bulkier, and luxurious 
+(in the sense of comfort). European products are lighter, maintain economy 
+of material, and spartan. Cars are a perfect example, even from the same manufacturer. 
+American cars are larger. Even when comparing the same car model, just between 
+continents, American suspensions are far softer. While European products are 
+trimmed, this also means they’re fitted.</p>
+
+<p>You can observe this in how the average person dresses in Europe versus the USA.
+Europeans are better dressed. They tend to wear tight, hemmed clothes,
+pants that aren’t jeans, and aren’t necessarily blue (or black or khaki), 
+sweaters over their button up long-sleeve shirts, and nice shoes. 
+Each pair of socks they own are are unique. Not dozens of pairs of the same 
+exact sock. And well….Americans, they wear that one-size-fits-all from Costco, 
+baggy jeans, and if they’re a older father, those “classic” <a href="https://www.amazon.com/New-Balance-Casual-Comfort-Trainer/dp/B093XKL7WZ">608 V5s</a> (because well, <i>they are<i> comfortable).</i></i></p>
+
+<p>As an experiment, I gave Nano Banana Pro the following image generation prompt:</p>
+
+<p>“Imagine me stereotypical images of American man average clothing and average European”</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/USAvsEurope1.png" alt="USA vs Europe 1" style="max-width: 70%; height: auto; display: block; margin: 0 auto 1rem auto;" />
+  <img src="/images/articles/design-review/filbe-kahakka/USAvsEurope2.png" alt="USA vs Europe 2" style="max-width: 70%; height: auto; display: block; margin: 0 auto 1rem auto;" />
+  <img src="/images/articles/design-review/filbe-kahakka/USAvsEurope3.png" alt="USA vs Europe 3" style="max-width: 70%; height: auto; display: block; margin: 0 auto;" />
+</div>
+
+<p><br /></p>
+
+<p><br /></p>
+<p style="text-align: center;"><b>And that is the FILBE vs Kahakka in a nutshell. <br /> The FILBE is baggy, spacious,
+heavy, and more comfortable. It is a brute of a bag. <br /> The Kahakka is thin, tight,
+and light. It is a precise pack.
+</b></p>
+<p><br /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Each aspect of the packs will be reviewed and compared in this section. Again the
+main considerations are for EDC (Everday Cary), Combat Use (CU), and build quality.</p>
+
+<p>Two terms worth highlight are Single Handed Usage (SHU) and Fine Motor Control (FMC).
+These are important concepts in military applications (to me) because they 
+determine how readily a product can be used when injured (single handed usage case) 
+and/or when under extreme stress where fine motor control becomes reduced.</p>
+
+<h3 id="main-compartment">Main Compartment</h3>
+
+<h4 id="main-compartment-access">Main Compartment Access</h4>
+<p>The Main Compartment is the heart of every pack. Access to the main compartment 
+on the Kahakka is through a fold top lid secured by 2 side release (SR) buckles. 
+The female ends of these buckles are note worthy because they have flared entrances, 
+similar to a <a href="https://gunmagwarehouse.com/blog/the-reasoning-behind-flared-magwells/#:~:text=Well%2C%20it%20has%20a%20larger,truly%20as%20simple%20as%20that.">flared magwell</a>. 
+This is the first time I’ve seen this on an SR buckle, though I’m sure they exist elsewhere.
+It’s a strong design choice - it does make buckling easier, especially in
+stressful situations where fine motor control goes out this window.</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140513-1.jpg" alt="Front of pack with 2 SR buckles" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Front of pack with 2 SR buckles and their flared inserts.</p>
+</div>
+
+<p>In comparison, the FILBE uses a J-zip, so named because the zipper is stretches 
+longer down one side than the other.</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_134550-3.jpg" alt="FILBE Main Compartment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Main Compartment</p>
+</div>
+
+<p>In terms of opening the main compartment, it might be argued that the Kahakka is
+easier. It only requires one hand to unlatch the buckles, and then lift the lid.
+The FILBE has two zippers, but they do not slide freely enough without some
+additional force on the bag to keep it in place. Therefore, one handed usage is
+easier on the Kahakka, but accessing specific items is more challenging.</p>
+
+<p>Unbuckle the Kahakka’s main SR clips and the fold top lid extends open. This system
+is common in many recreational hiking packs. Fold top lids are great because they
+eliminate the weaknesses of zippers while leveraging the pack’s shell to keep out
+the elements. But for an assault pack, I’m not convinced they are the right choice.</p>
+
+<p>While opening can be done single handed, this system doesn’t provide
+easy access to materials in the compartments, except those placed at the top. When
+the fold top lid opens, the folding portion becomes an extended neck. In
+effect, the pack becomes a longer tube. Bottom access is challenging. My arm length
+is typical to that of a 6’ or 183cm tall man. As an EDC example, putting the 
+Kahakka on cashier’s counter and trying to put in groceries in an organized manner
+to maximize space usage and not crush anything, is actually really hard. I ultimately
+stopped using the Kahakka as an EDC mainly for this reason.</p>
+
+<p>One solution to this is often found in larger hiking packs with fold top lids. At
+the bottom, there is a zippered “sleeping bag section.” When everything must be 
+packed from bottom-to-top, things will inevitably get pulled out of the pack to 
+to the ground for access. I can’t imagine having to fidget with this in combat 
+when some sort of ammunition, medical supply, etc. has made its way to the bottom.</p>
+
+<p>One great design implementation in the Kahakka fold top lid is a plastic insert 
+in the lower lip (towards bottom of picture below). This little flexible piece
+does the job of keeping the mouth of the lid open and <span class="footnote-ref">squared.<span class="footnote-tooltip"> I know it’s a rectangle, but “rectangled” doesn’t read as smoothly as a verb </span></span>
+There is however a seam on this lower lip which is sharp and seems to catch a lot.
+I was concerned how this seam will hold up in time, but after more than a year it
+is no worse for wear.</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140744.jpg" alt="Plastic Insert on bottom lip" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Plastic Insert on bottom lip keeps opening squared. Seam on bottom is "rough" where there is a 45 degree in the material.</p>
+</div>
+
+<h4 id="main-compartment-organization">Main Compartment Organization</h4>
+
+<p>For similar reasoning, larger hiking packs with Fold Top Lids now 
+come with zippered “sleeping bag section” at the bottom. When everything must be
+packed from bottom-to-top, things will inevitably get pulled out of the pack on 
+to the ground to get access those bottom items.</p>
+
+<p>One great design implementation in the Kahakka is a plastic insert in lower Fold 
+Top lip. This little flexible piece does the job of keeping the mouth of the lid 
+open and squared (I know it’s a rectangle, but rectangled doesn’t read as smoothly
+as a verb). There is however a seam on this lower lip (2nd photo above) which is 
+sharp and seems to catch a lot. I am concerned how this seam will hold up in time.</p>
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/img_20241012_135510-3.jpg" alt="Image 2" style="width: 100%; height: auto;" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Organizaton (J-Zipper open) <br /> Visible: radio pouch, mesh pocket, baguette holder, and back panel access.</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140758-1.jpg" alt="Image 1" style="width: 100%; height: auto;" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Kahakka Organization (Fold top lid extended) <br /> Visible: hydration bladder. <br /> "Hello darkness my old friend..."</p>
+  </div>
+</div>
+
+<p><br />
+<br /></p>
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/img_20241012_134550-3.jpg" alt="Image 2" style="width: 100%; height: auto;" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Access - J zipper</p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140513-1.jpg" alt="Image 1" style="width: 100%; height: auto;" />
+    <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Kahakka Access - 2 SR buckles and fold top lid</p>
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140513-1.jpg" alt="Front of pack with 2 SR buckles" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Front of pack with 2 SR buckles and their flared inserts.</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140744.jpg" alt="Plastic Insert on bottom lip" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Plastic Insert on bottom lip keeps opening squared. Seam on bottom is "rough" where there is a 45 degree in the material.</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140758-1.jpg" alt="Dark inside the main compartment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">"Hello darkness my old friend…" – Dark inside the main compartment, and elastic water bladder holder</p>
+</div>
+
+<p>Unbuckling these and the lid flips open as is common in many recreational hiking
+packs. Fold Top Lids are great for large recreational hiking packs. They eliminate
+the weaknesses of zippers while effectively using the pack’s shell to keep out
+the elements. But for an assault pack, I’m not convinced they are the right 
+choice. They don’t provide easy access to materials in the main compartment, except
+those placed at the top.</p>
+
+<p>When the Fold Top Lid is opened, the folding portion becomes a sort of neck. In
+effect, the pack becomes a longer tube, too long to effectively reach the bottom
+with a hand. My arm length is equivalent to that of a 6′ or 183 cm man’s. As an 
+EDC example, putting the Kahakka on cashier’s counter and trying to put in groceries
+is not easy. For similar reasoning, larger hiking packs with Fold Top Lids now 
+come with zippered “sleeping bag section” at the bottom. When everything must be
+packed from bottom-to-top, things will inevitably get pulled out of the pack on 
+to the ground to get access those bottom items.</p>
+
+<p>One great design implementation in the Kahakka is a plastic insert in lower Fold 
+Top lip. This little flexible piece does the job of keeping the mouth of the lid 
+open and squared (I know it’s a rectangle, but rectangled doesn’t read as smoothly
+as a verb). There is however a seam on this lower lip (2nd photo above) which is 
+sharp and seems to catch a lot. I am concerned how this seam will hold up in time.</p>
+
+<h4 id="main-compartment-access---filbe">Main Compartment Access - FILBE</h4>
+
+<p>In comparison, the FILBE uses a J-zip, so named because the zipper is stretches longer down one side than the other.</p>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_134550-3.jpg" alt="FILBE Main Compartment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Main Compartment</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="/images/articles/design-review/filbe-kahakka/img_20241012_135510-3.jpg" alt="FILBE Main Compartment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;" />
+  <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE Main Compartment</p>
+</div>
+<p>)</p>
+
+<h4 id="main-compartment-organization---comparison">Main Compartment Organization - Comparison</h4>
+
+<p>Inside the Main Compartment, the Kahakka has one single pouch for a water bladder.
+The top of the water bladder pouched is kept under tension by an elastic band. 
+There are 3 togs anchoring the water bladder to, although only the center one is
+visible in my photo. I am not a fan of elastic tensioning because these materials
+eventually “dry out,” losig their elasticity. In comparison, the FILBE uses a 
+buckle strap which will last as long as the buckle or strap does. The FILBE does 
+not have the locking togs the Kahakka does, as this pouch is intended to hold a
+military radio and such togs would get in the way. In real world testing, after 
+using the FILBE with a water bladder, the lack of togs made little difference in 
+my experience.</p>
+
+<p>Both the Kahakka and FILBE have exit slots for water bladder tubes (or radio 
+antennae). I heavily prefer the flap coverings that Savotta has used. 
+They are located on each side of the flip top lid, just above the hemming in my 
+photos, towards the rear of the packs. The exit slots on the FILBE are covered 
+by Velcro and part of the top carrying handle. Despite rarely using these, they 
+show great wear at this stage. Their top placement makes them less than ideal 
+for inclement weather, but this may be a necessity for the intended radios antennas.</p>
+
+<p>The Kahakka has no other organization in its main compartment. The FILBE has 2 
+“canteen” pouches. The long one is visible in my photo, beneath the short side 
+of the J zipper. It has been named, “the baguette holder.” Another benefit of
+the J zipper, it to be able to partially close the pack, while having extended 
+object secured in the main comparment (like a bagueete).</p>
+
+<p>There is another “canteen” pouch on the opposite side but it is so small, it is
+only good for a bundle of socks. It’s not clear to me what intended usage was, but
+it seems the perfect holder for a grenade. The FILBE also has a zippered mesh 
+pocket at the top, which is fantastic. Easy to access, and easy to see what’s 
+inside.</p>
+
+<p>There is one thing which annoyed me greatly about the Kahakka. There is a PU 
+coating on the inside to increase the weather resistance - a great idea. But 
+this PU coating is a hunter’s green (i.e. a very dark green). I don’t know if this
+was intentional, such as a carry of from the procurement specifications for the M20.
+For example, so as to reduce any potential offending light signature that might
+be produced while looking for or at something in the main compartment at night. 
+Ultimately, it makes trying to find something, even on a sunny day, a challenge.
+My constructive advice would have be to use a lighter material to reflect light
+further down the cavity, and if needed, use a darker coating only at the very top,
+or on the outer pouches.</p>
+
+<p>One further grievance against the Kahakka is the lack of drainage grommets. 
+These allow water to escape the pack if it manage to get inside. The Fins and 
+the Marines have rather different geographic sectors they are focused on. The 
+lack of grommets may be due to the Finnish Defense Forces pack requirements, 
+which again, I am wholly ignorant of, and they may have requested no external
+openings for drainage. With the USMC being focused on maritime operations, it 
+is no surprise there are 5 drainage grommets in the FILBE. Even their 
+<a href="https://www.bellevilleboot.com/index.php?l=product_detail&amp;p=96">hot weather boot</a> 
+has drainage (although obviously this helps with other issues).</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_134417.jpg" alt="Bottom of the FILBE" />
+<em>Bottom of the FILBE - The FILBE has 5 drainage grommets, 3 in the main compartment (1 visible here, 2 outlines of the others can be seen under the PALS webbing) and 2 in the front pouch.</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140706-1.jpg" alt="Bottom of the Kahakka" />
+<em>Bottom of the Kahakka (no grommets)</em></p>
+
+<p><strong>Other Notes:</strong> The FILBE has an additional “compartment” which is the zippered access above the radio/water bladder pouch. This is used for access the rigid plastic back plate of the pack, allowing one to remove it. In the past I’ve used this pouch to store documents and hide back-up cash while traveling as the zipper goes unnoticed. It is strange that a zipper was incorporated here instead of a flap as it would presumably lower production cost and weight.</p>
+
+<p><strong>Summary Trade-off (Main Compartment):</strong></p>
+
+<p>Opening the Kahakka can be done single-handedly with the SR buckles and lid, but accessing materials is restricted and difficult. Opening the FILBE can be done single-handedly, but with significantly more effort. Once opened, materials are very accessible and better organized. The organization on the FILBE is simple, but effective, while the Kahakka has no organization. The Kahakka’s internal PU coating may be good for weather-proofing but obscures items in the recess of the bag.</p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<h1 id="below-is-a-draft">BELOW IS A DRAFT</h1>
+
+<h2 id="a-comparative-review-with-the-usmc-filbe-assault-pack-europe-vs-america">A Comparative Review with the USMC FILBE Assault Pack (Europe vs America)</h2>
+
+<p><strong>This is a review of the Savotta Kahakka 25L (October, 2024). Unlike most reviews of the pack, this one is critical. Here I compare the new Savotta Kahakka (2024) with my previous backpack, another military assault pack. Feel free to skip the rambling Introduction by going to, “First Impression – and Numbers”</strong></p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>I’ve had the same backpack for 9 years (RIP 2015-2024). It’s been used at least as many days as I’ve had it.</p>
+
+<p>Sometimes it hardly carried anything but papers, other times it was stuffed to the brim, camping gear strapped to the sides. It was with me as I rode the métro and walked the streets of Paris to university, it was with me when I reached the foot of the glaciers on Mont Blanc. It’s seen the beaches on both sides of the Atlantic, in the USA and Ireland, and beaches on both sides of the Mediterranean, France and Italy, not to forget Corsica in the middle. It’s been over the Apennines, Appalachians, Blue Stacks and Derryveaghs, and even graced the Lake District. It’s survived a dozen different farms, carried books into at least 4 different universities, and <em>most importantly</em>, had a pocket just for holding a fresh baguette.</p>
+
+<p><strong>This backpack was the FILBE Assault Pack.</strong></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/filbe-3.jpg" alt="FILBE Assault Pack with Mont Blanc" />
+<em>FILBE Assault Pack with a backdrop of Mont Blanc</em></p>
+
+<p>And here are more scenic photos with the pack…</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/20151011_122950-1.jpg" alt="Another view from the Alps" />
+<em>Another view from the Alps, with the two glaciers coming off the Mont Blanc mountain block. My other boot fell down shortly before taking this photo</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/20150811_103237-1.jpg" alt="Propriano, Corsica" />
+<em>Propriano, Corsica</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/20150823_120304.jpg" alt="Corsica interior" />
+<em>Somewhere in the middle of Corsica, I don’t even know where. Shortly after the heater incident which burnt holes in my at the time, new FILBE.</em></p>
+
+<p>So, any backpack replacing my FILBE Assault Pack (AP) was going to have big straps to fill. And why replace the FILBE AP if it was so cherished?</p>
+
+<p>Simple, 9 years of wear and tear. An early heater accident in a shoddy caravan lead to melted holes, weak points that no patching completely fixed. Eventually, a huge tear formed at the top, becoming so big I stopped using the zipper to access the main pouch. This was in the 8th year mind you. But the coming of the Irish rainy winter coming, and unending annoyance of passerbys letting me know my bag is open (<em>it is perpetually open because it can’t be closed</em>), encouraged me to move on.</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_134519.jpg" alt="The rip" />
+<em>The rip</em></p>
+
+<p>To be clear, I do like reusing things as much as possible. As a point in proof, the FILBE AP isn’t even the oldest material item I still use on a weekly basis. That honor belongs to 2 shirts I got in highschool, and are probably old enough to purchase alcohol without me wearing them. Technically the FILBE AP can be patched (at significant expense), but even then, the stitching and the Velcro are unraveling, and the rain-proof zipper covers are wearing off. Patching the top would be like putting new tires on a car with a broken transmission (or battery for future generations).</p>
+
+<p><strong>Enter the Kahakka 25L</strong></p>
+
+<p>How does one go from an American military pack to a Finnish one? Well, I enjoy post-apocalyptic exclusion zones filled with mystery and mysticism. Luckily, I came across <a href="https://www.roadtovostok.com/">The Road to Vostok</a>, an indie game (in the making) whose fictional Finnish setting somewhat mirrors that of the Chornobyl and Pripyat Exclusion zones in Ukraine (and similarly is taken advantage of by the <a href="https://www.stalker2.com/en">STALKER</a> video game series). Recently, Road to Vostok gained its first commercial collaboration, <strong><a href="https://www.savotta.fi/">Savotta</a></strong>, where I learned of the company and its offerings at just the right time.</p>
+
+<p>Savotta is a well-known Finnish supplier of outdoor gear, for both military, police, and recreational use in “extreme-environments.”</p>
+
+<p><strong>Just check out their video from a recent Road to Vostok Post:</strong><br />
+<strong><a href="https://youtu.be/pOTDmiEPA5A?t=181">“We are Savotta and we make military gear”</a></strong></p>
+
+<p>If that doesn’t convince you to buy one of their products (or want to be Finnish), well then, you’re clearly not me.</p>
+
+<p>To end this introduction I’ll make a few things clear. First, I’ve never been nor am in the military. I like military packs because for equivalent rugged designs, recreational packs are much more expensive. Specifically, military packs which are GI issued. Recreational packs are also slim lined and generally don’t have <a href="https://en.wikipedia.org/wiki/Pouch_Attachment_Ladder_System">PALS webbing</a>. So, when I discuss military applications and utility, I do so out of with qualified experience. Well…Sort of. My PhD (and previous DIY hobbies) have majorly focused on physical product design and development (including apparel and hardware), so I’m keen to noticing things most people don’t. And as ridiculous as it is to say (according to critics), I often built things for the thousands of hours I used to play MilSim games (paintball, airsoft). So, I am familiar with the carrying needs for equipment and the easy access to materials while under stress.</p>
+
+<p><strong>My usage is everyday</strong>, and I mean, everything that could possibly happen in my daily life which is for better or worse, a lot. I need something that “can do it all.” Something that can be loaded up for an overnight hiking trip, or a Joe Six-pack weekend away, something to carry my groceries, something with a hip belt (but no padding), and something that can also be brought to the office, into a museum, and onto a plane (without issue).</p>
+
+<p><strong>It is a tall ask</strong>, and I am hyper critical</p>
+
+<h3 id="first-impression--and-numbers">First Impression – and Numbers</h3>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241020_145923-1.jpg" alt="Front View" />
+<em>Front View</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241020_145928.jpg" alt="Right Side View" />
+<em>Right Side View – Hole on top of the FILBE is partly visible</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241020_145959.jpg" alt="Top-Front View" />
+<em>Top-Front View – The hole in the top of the FILBE is partly visible</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241020_150018.jpg" alt="Back View" />
+<em>Back View – Age related fraying on the FILBE is visible</em></p>
+
+<p>The first time I saw the Kahakka, side by side with the FILBE, I thought, “…and <em>this</em> is the difference between America and Europe.”</p>
+
+<p>When I go from Europe to America, or vice versa, I get “<a href="https://en.wikipedia.org/wiki/Aspect_ratio_(image)#:~:text=The%20aspect%20ratio%20of%20an,3%3A2%20in%20still%20photography.">aspect ratio</a> shock”. It’s like going from one aspect ratio on your TV, like 16:10 to 4:3 in an instant. Just it’s with real life. I haven’t heard anyone else get this, but if you do, it’d be nice to know I’m not alone.</p>
+
+<p>When you go to the USA for the first time in a while, it suddenly feels like everything has gotten flattened, smashed down and really wide. The roads are so wide, that a single lane in American suburbia feels equivalent to a rural double lane in Europe. Even the landscape just seems to stretch out further. Meanwhile, go back to Europe and everything has gotten tall and skinny. Go into an older continental European home and you ain’t touchin’ that ceiling, even if you jump. In Europe, everything does seem skinnier, from the fencing to the sign posts – because it is. You just have to look at American and European printing paper if you aren’t yet convinced. Americans love their 8.5″x10″ sheets, and Europeans their 8.3″x11.7″.</p>
+
+<p>If you consider most American products, they are heavier, bulkier, and luxurious (in the sense of comfort). European products are lighter, and maintain economy of material. Cars are a perfect example, even from the same manufacturer. American cars are bigger on average, and when comparing like for like between the same models, just between continents, American suspensions are far softer. While European products are trimmed, this also means they’re fitted. You can observe this in how the average person dresses in Europe versus America. Europeans are better dressed. They wear tight, hemmed clothes, pants that aren’t jeans, and aren’t necessarily blue (or black or khaki), sweaters over their button up long-sleeve shirts, and nice shoes. Oh, and each pair of socks they own are are unique. Not dozens of pairs of the same exact sock. And well….Americans, they wear that one-size-fits-all from Costco, baggy jeans, and if they’re a Dad, those classic <a href="https://www.amazon.com/New-Balance-Casual-Comfort-Trainer/dp/B093XKL7WZ">608 V5s</a> (because hell, <em>they are</em> more comfortable).</p>
+
+<p>And that is the difference between the FILBE vs the Kahakka. The FILBE is bigger, heavier, and more comfortable. By appearances, it is baggier. The Kahakka is thinner, smaller, and lighter. It is trim.</p>
+
+<h3 id="specifications-comparison">Specifications Comparison</h3>
+
+<p>Below is a detailed specifications comparison of the FILBE vs Kahakka. Color coded pieces depict <em>my opinion</em> based on experience. It does not highlight where one pack is better or worse than the other, though this is usually the case, but it highlights implementations better or worse than standard.</p>
+
+<p><strong>Guide:</strong><br />
+<span style="color: green;"><strong>Green</strong>: Very Good</span><br />
+<strong>Black</strong>: Standard, Acceptable<br />
+<span style="color: #d4a017;"><strong>Yellow</strong>: Questionable or Uncertain</span><br />
+<span style="color: red;"><strong>Red</strong>: Bad</span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>FILBE Assault Pack</strong></th>
+      <th><strong>Savotta Kahakka 25L</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Year, Dimensions, Materials</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Initial Production Year</strong></td>
+      <td>2014</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td><strong>Weight</strong></td>
+      <td><span style="color: red;">1.77kg (3.90 lbs)</span></td>
+      <td><span style="color: green;">1.30 kg (2.87 lbs)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Size (L)</strong></td>
+      <td>Main: 23 L<br />Patch Pocket: 6 L<br />Total Estimated: 29L*</td>
+      <td>Main: 25L<br />Side Pouches (x2) = 3L<br />Total Estimated: 31 L</td>
+    </tr>
+    <tr>
+      <td><strong>Height</strong> (minimum)</td>
+      <td>50.8 cm (20 in)</td>
+      <td>48 cm (18.9 in)</td>
+    </tr>
+    <tr>
+      <td><strong>Width</strong></td>
+      <td><span style="color: red;">35.6 cm (14 in)</span></td>
+      <td><span style="color: green;">27.5 cm (10.8 in) (with empty side pouches)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Depth</strong> (maximum)</td>
+      <td>20.3 (8 in)</td>
+      <td>19 cm (7.5 in)</td>
+    </tr>
+    <tr>
+      <td><strong>Material</strong></td>
+      <td><span style="color: #d4a017;">600 D Nylon</span></td>
+      <td><span style="color: green;">1000D Cordura, 500D Cordura for back fabric</span></td>
+    </tr>
+    <tr>
+      <td><strong>Compartment and Pockets</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Pockets</strong></td>
+      <td><span style="color: green;">1 Patch Pocket (6L) containing: {1 Flat Mesh Pocket}<br />Inside Main: {1 Flat Mesh Pocket<br />1 Large Canteen Pocket<br />1 Small Canteen Pocket<br />1 Zippered Back Plate Pocket}</span></td>
+      <td><span style="color: #d4a017;">1 Patch Pocket (very small)<br />1 Flat Pocket (small)<br />2 Expandable Side Pouches (3L)<br />Open Top Back Plate Pocket</span></td>
+    </tr>
+    <tr>
+      <td><strong>Main Compartment Opening</strong></td>
+      <td><span style="color: green;">J Zipper</span></td>
+      <td><span style="color: #d4a017;">Fold Top Lid</span></td>
+    </tr>
+    <tr>
+      <td><strong>Interior Compartment Lining</strong></td>
+      <td>No</td>
+      <td><span style="color: green;">Yes (Black PU Material)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Radio / Water Bladder Pouch</strong></td>
+      <td>Yes (Strap)</td>
+      <td><span style="color: #d4a017;">Yes (Elastic Band)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Water Bladder Hanger</strong></td>
+      <td><span style="color: red;">No</span></td>
+      <td><span style="color: green;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Drainage Grommets</strong></td>
+      <td><span style="color: green;">Yes</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Straps, Buckles, and Zippers</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Side Straps</strong> / <strong>Compression Straps</strong></td>
+      <td><span style="color: green;">2 Straps (Quick Release Buckle)</span></td>
+      <td>2 Straps (G-Hooks)</td>
+    </tr>
+    <tr>
+      <td><strong>Bottom Compression Straps</strong></td>
+      <td>Yes (Quick Release Buckle)</td>
+      <td>Yes (SR Buckle, clips to main lid)</td>
+    </tr>
+    <tr>
+      <td><strong>Shoulder Strap Quick Release</strong></td>
+      <td><span style="color: green;">Yes (Quick Release Buckle)</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Type</strong></td>
+      <td>Quick Release</td>
+      <td>Berg Buckle Belt</td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Height</strong></td>
+      <td>~40mm</td>
+      <td>50mm</td>
+    </tr>
+    <tr>
+      <td><strong>Zipper Protection</strong></td>
+      <td><span style="color: green;">Rubberized Cover (possibly Aquaguard by YKK)</span></td>
+      <td>Zipper Flaps (i.e. fabric covering)</td>
+    </tr>
+    <tr>
+      <td><strong>BackPlate</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Removable Back Plate Insert</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: green;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Standard Back Plate Insert</strong></td>
+      <td>Rigid Plastic Insert x2<br />Parallel 1cm Closed Cell Foam Strips</td>
+      <td>1 cm Closed Cell Foam</td>
+    </tr>
+    <tr>
+      <td><strong>Easy Access to Back Plate</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: green;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Other (NIR, NATO)</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Near Infrared Reduction Compliant</strong></td>
+      <td><span style="color: #d4a017;">Probable**</span></td>
+      <td><span style="color: green;">Confirmed</span></td>
+    </tr>
+    <tr>
+      <td><strong>NATO Stock Number (NSN)</strong></td>
+      <td>8465-01-600-7911</td>
+      <td>8465-58-002-0196</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>However, it is estimated at 35-37L by this review which matches the review by The Outdoor Gear Review</em><br />
+<em>*This is probable because I can find updated webbing for the FILBE which is marketed as being NIR compliant. However, NIR compliance wasn’t as important a decade ago</em></p>
+
+<h2 id="overview-1">Overview</h2>
+
+<p>I will refer to the specifications table above, but write this review in the fashion I examined both packs side-by-side for the first time so it is more story like.</p>
+
+<p>Single Handed Usage (SHU) and Fine Motor Control (FMC) are important concepts in military applications (to me) because they determine how readily a product can be used when injured (single handed usage case) and/or when under extreme stress and fine motor control becomes reduced.</p>
+
+<h4 id="main-compartment-1">Main Compartment</h4>
+
+<p>The Main Compartment is the heart of every pack as it will store the most material. Access to the main compartment on the Kahakka is through a Fold Top Lid secured by 2 Quick Release (SR) buckles. The female ends of these buckles are note worthy because they have flared entrances, similar to a <a href="https://gunmagwarehouse.com/blog/the-reasoning-behind-flared-magwells/#:~:text=Well%2C%20it%20has%20a%20larger,truly%20as%20simple%20as%20that.">flared magwell</a>. This is the first time I’ve seen this on a SR buckle and I can’t even get Google Images to show me other like models (I’m sure they exist). This is a fantastic design choice, it really makes buckling easier and in a stressful situation where Fine Motor Control (FMC) goes out this window, this can make a difference.</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140513-1.jpg" alt="Front of pack with 2 SR buckles" />
+<em>Front of pack with 2 QR buckles and their flared inserts.</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140744.jpg" alt="Plastic Insert on bottom lip" />
+<em>Plastic Insert on bottom lip keeps opening squared. Seam on bottom is “rough” where there is a 45 degree in the material.</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140758-1.jpg" alt="Dark inside the main compartment" />
+<em>“Hello darkness my old friend…” – Dark inside the main compartment, and elastic water bladder holder</em></p>
+
+<p>Unbuckling these and the lid flips open as is common in many recreational hiking packs. Fold Top Lids are great for large recreational hiking packs. They eliminate the weaknesses of zippers while effectively using the pack’s shell to keep out the elements. But for an Assault Pack, I’m not convinced they are the right choice. They don’t provide easy enough access to materials in the main compartment.</p>
+
+<p>With the Fold Top Lid fully opened, the pack becomes a long tube, too long to effectively reach the bottom. My arm length is equivalent to that of a 6′ or 183 cm man’s, and putting the Kahakka on cashier’s counter and trying to put groceries in is just not easy. For similar reasoning, larger hiking packs with Fold Top Lids now come with zippered “sleeping bag section” at the bottom. When everything must be packed from bottom-to-top, things will inevitably get pulled out of the pack to get those bottom items. In comparison, the FILBE uses a J-zip, so named because the zipper is stretches longer down one side than the other.</p>
+
+<p>One great design implementation in the Kahakka is a plastic insert in lower fold top lip. This little flexible piece does a great job of keeping the mouth of the lid open and squared (I know it’s a rectangle, but rectangled doesn’t read as smoothly as a verb). There is however a seam on this lower lip (2nd photo above) which is sharp and seems to catch a lot. It is where the corner fabric I’m very concerned how this seam will hold up in time.</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_134550-3.jpg" alt="FILBE Main Compartment" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_135510-3.jpg" alt="Kahakka Main Compartment" /></p>
+
+<p>Inside the Main Compartment, the Kahakka has one single pouch for a water bladder. The top of the water bladder pouched is kept under tension by some kind of elastic band. There are 3 togs for which to anchor the water bladder to, although only the center one is visible in my photo. I am not a fan of elastic tensioning because these materials eventually “dry out,” lose their elasticity, and become useless. In comparison, the FILBE uses a buckle strap which will last as long as the buckle does. The FILBE does not have the locking togs the Kahakka does, but this is forgivable because this pouch is intended to hold a military radio and such togs would get in the way. Importantly, after using the FILBE with a water bladder, the lack of togs made little difference in my experience.</p>
+
+<p>Both the Kahakka and FILBE have exit slots for water bladder tubes (or radio antennae). I heavily prefer the flap coverings that Savotta has used. They are located on each side of the flip top lid, just above the hemming in my photos, towards the rear of the packs. The exit slots on the FILBE are covered by Velcro and part of the top carrying handle. Despite rarely using these, they show great wear at this stage. Their top placement makes them less than ideal for inclement weather, but this may be a necessity for the intended radios antennas.</p>
+
+<p>The Kahakka has no other organization in its main compartment. The FILBE has 2 “canteen” pouches. The long one is visible in my photo, beneath the short side of the J zipper. <em>It was the perfect baguette holder</em>. There is another “canteen” pouch on the opposite side but it is so small, it is only good for a bundle of socks. I’m not sure what the intended usage was. It seems the perfect holder for a grenade, but also where I wouldn’t want to keep one. The FILBE also has a zippered mesh pocket at the top, which I loved. Easy to access, and easy to see what was inside and where it was.</p>
+
+<p>There is one thing which annoyed me greatly about the Kahakka. There is a PU coating on the inside to increase the weather resistance, a great idea, but this PU coating is a hunter’s green (i.e. a very dark green). I don’t know if this was intentional, so as to reduce any offending light signature that might be produced while looking for or at something in the main compartment at night. But it makes trying to find something in the recess of the compartment, even on a sunny day, a challenge. My constructive advice would have be to use a lighter material to reflect light further down the cavity, and if needed, use a darker coating only at the very top.</p>
+
+<p>One further grievance against the Kahakka is the lack of drainage grommets. These allow water to escape the pack if it manage to get inside. The Fins and the Marines have rather different geographic sectors they are focused on. The lack of grommets may be due to the Finnish Defense Forces pack requirements, which I am wholly ignorant of, and they may have requested no external openings for drainage. With the USMC being focused on maritime operations, it is no surprise there are 5 drainage grommets in the FILBE. Even their <a href="https://www.bellevilleboot.com/index.php?l=product_detail&amp;p=96">hot weather boot</a> has drainage (although obviously this helps with other issues).</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_134417.jpg" alt="Bottom of the FILBE" />
+<em>Bottom of the FILBE - The FILBE has 5 drainage grommets, 3 in the main compartment (1 visible here, 2 outlines of the others can be seen under the PALS webbing) and 2 in the front pouch.</em></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140706-1.jpg" alt="Bottom of the Kahakka" />
+<em>Bottom of the Kahakka (no grommets)</em></p>
+
+<p><strong>Other Notes:</strong> The FILBE has an additional “compartment” which is the zippered access above the radio/water bladder pouch. This is used for access the rigid plastic back plate of the pack, allowing one to remove it. In the past I’ve used this pouch to store documents and hide back-up cash while traveling as the zipper goes unnoticed. It is strange that a zipper was incorporated here instead of a flap as it would presumably lower production cost and weight.</p>
+
+<p><strong>Summary Trade-off (Main Compartment):</strong></p>
+
+<p>Opening the Kahakka can be done single-handedly with the QR buckles and lid, but accessing materials is restricted and difficult. Opening the FILBE can be done single-handedly, but with significantly more effort. Once opened, materials are very accessible and better organized. The organization on the FILBE is simple, but effective, while the Kahakka has no organization. The Kahakka’s internal PU coating may be good for weather-proofing but obscures items in the recess of the bag.</p>
+
+<h4 id="pouches">Pouches</h4>
+
+<p>The Kahakka has 4 additional pouches and pockets. The first is a patch pocket (has its own volume) which is part of the Fold Top Lid, and is accessible from the rear of the pack. This pouch is tiny. Every time I stick my hand inside it is scrapping against the zippers (which are weather proofed by a fabric over hang). It makes me wonder how it’s expected for someone wearing gloves in the Finnish winter to readily access anything besides an energy bar from it. Savotta claims, “The one on top of the lid has a capacity of ca. 3 litres, suitable for NVDs, water bottles etc.” and their <a href="https://youtu.be/M3rsKZi5hmE?t=15">Kahakka 25L video</a> also shows them pulling out a pair of binoculars. The shape and accessibility of the pouch is certainly what makes it feel like it isn’t 3L large (and I have my doubt about fitting a 2.5L coke bottle in there). And the Savotta video shows you how someone in the Finnish winter will be accessing the compartment: by using one hand to pull the top zipper up.</p>
+
+<p>I’m nervous about putting anything small and important one would normally place here, like keys because the zipper is on the lowest part of the pouch when the flip top lid is closed. Frankly, I’ve just stopped using it of instead of trying to make it work, but I’ve no doubt when I get back to hiking and camping something will get stuff inside. The <a href="https://www.savotta.fi/products/backpack-cover">Medium sized Savotta Rain Cover</a> fits inside but I wouldn’t be putting anything else in there with it.</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_141023.jpg" alt="Patch pocket" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140831.jpg" alt="Flat pocket" /></p>
+
+<p>The next to cover is the flat pocket on the front. A flat pocket is so named because it doesn’t maintain volume of its own, but takes away volume from other places, here, the main compartment. The access is by zipper, again covered by fabric to proof it of the elements, and again it is difficult to access. There is a D-ring inside to attaching items (like keys) with a carabiner or other attachment which is nice. The pocket can just fit a Kindle Scribe (1st generation) which is 19.6 cm wide, and 22.9 cm tall (7.72″x9.06″).</p>
+
+<p>Finally there are the Kahakka famous side pouches. I say this because they are always a surprising treat to every reviewer for the Kahakka as far as I can tell. And yes, they are huge pockets. These are properly 3L!</p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140538.jpg" alt="Side pouches" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140935-1.jpg" alt="Side pouches detail" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_135441.jpg" alt="Side pouches expanded" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140758-1.jpg" alt="Water bladder holder" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_135945.jpg" alt="Additional view 1" /></p>
+
+<p><img src="/images/articles/design-review/filbe-kahakka/img_20241012_140026.jpg" alt="Additional view 2" /></p>
+
+<h2 id="quality-and-materials">Quality and Materials</h2>
+
+<p><em>[This section appears to be incomplete in the original post]</em></p>
+
+<h2 id="the-good-the-bad-and-the-ugly">The Good, The Bad, and The Ugly</h2>
+
+<p><em>[This section appears to be incomplete in the original post]</em></p>
+
+<h2 id="extra-photos-for-consideration">Extra Photos for Consideration</h2>
+
+<p><em>[This section appears to be incomplete in the original post]</em></p>
+
+</div>
+
+
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2024/03/03/Introduction-to-Logic-Chapter-1/">
+            Chapter 1 Solutions
+            <small>03 Mar 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2024/02/22/Introduction-to-RL/">
+            1 - Introduction to Reinforcement Learning and Human Behavior
+            <small>22 Feb 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2024/01/24/Introduction-to-Logic-Introduction/">
+            An Introduction to LOGIC and SCIENTIFIC METHOD<br>The What and Why
+            <small>24 Jan 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      1 - Introduction to Reinforcement Learning and Human Behavior &middot; Intelligent Storage
+    
+  </title>
+
+  
+  <link rel="canonical" href="http://localhost:4000/2024/02/22/Introduction-to-RL/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/Thinker.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/Thinker.png">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+
+  <link rel="stylesheet" href="/public/css/custom.css">
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+    
+    <!-- Main navigation pages (excluding home) -->
+    
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/articles/">Articles</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+        
+      
+    
+      
+        
+      
+    
+    
+    <a class="sidebar-nav-item" href="http://localhost:4000/posts/">Posts</a>
+    
+    <!-- Articles Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item" href="http://localhost:4000/articles/">Articles</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/human-behavior/">→ Human Behavior</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/architecture/">→ Architecture</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/design-gear/">→ Design + Gear Review</a>
+      </div>
+    </div>
+    
+    <!-- Projects Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/logic-scientific-method/">→ Logic & Scientific Method</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/self-change/">→ Self-Change</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/mapping-maneuvers/">→ Mapping Maneuvers</a>
+      </div>
+    </div>
+    
+    <!-- Book Reviews Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/book-reviews/">Book Reviews</a>
+    
+    <!-- Gallery Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/gallery/">Gallery</a>    
+    
+    <!-- Stories Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/stories/">Stories</a>
+    
+    <span class="sidebar-nav-item">Currently v1.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2026. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Intelligent Storage</a>
+            <small>Cultivating sensitivity to difficulties</small>
+          </h3>
+          <nav class="top-nav">
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/about/">About</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/posts/">Posts</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/articles/">Articles</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/projects/">Projects</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/book-reviews/">Book Reviews</a>
+  </div>
+  
+    <div class="top-nav-item">
+    <a class="top-nav-link" href="/gallery/">Gallery</a>
+  </div>
+  
+</nav>
+
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">1 - Introduction to Reinforcement Learning and Human Behavior</h1>
+  <span class="post-date">22 Feb 2024</span>
+  <p>This writing experiment had first been intended to exemplify a rigorous approach towards dissecting current issues, exploring scientific mysteries, and thought testing ideas to a level that only written work can, for the ultimate purpose of improvement. I recently had the privilege of attending a conference which was both a change of routines, and an awareness refresher for my own circular behaviors. And that is this article’s theme: understanding self-behavior.</p>
+
+<p>It is not uncommon for self-help or self-improvement guides to make the connection between our behaviors and those that might be expected from a rat in various experimental paradigms. If we are not careful with how we conduct ourselves, these guides warn, we will be little different from our rodent friends who seek pleasurable rewards at every turn. The danger to be controlled by very basic stimuli is real. It is difficult to not have a relatable experience with this. And while realizing this connection for the first or second time can bring some kind of enlightenment, for me it never helped with understanding the larger behaviors at play that may not be preferable. Deeper research into literature for both <em>classical</em> and <em>operant conditioning</em> failed to illuminate much more.</p>
+
+<p>But something clicked for me when I first encountered <em>Q-Learning,</em> a form of <em>Reinforcement Learning</em> (which is a form of machine learning). Ironic or coincidental, there is something to be said in the construction of machines and artificial intelligence to help us uncover the truths of ourselves.</p>
+
+<blockquote>
+  <p><em>“It is like mathematical equations. And each solved equation brings you closer to God. The act of creation is the intended use.”</em></p>
+
+  <p>Anya Oliwa, Wolfenstein: New Order</p>
+</blockquote>
+
+<p>I won’t be taking any religious stances here, but if we consider ‘God’ to be the Universe itself, what it <em>really is</em>, then it could be said that engineering, mathematics, and research are the strongest forms of prayer.</p>
+
+<p>Moving on. In this article, it is the aim to explain a basic model of <em>Q-Learning</em> so that later connections can be made to larger behaviors, although these should become self-evident. Although <em>Q-Learning</em> is generally explained mathematically, it is easiest to do conceptually, and would otherwise be inappropriate for this piece.</p>
+
+<h2 id="part-1-choose-any-tile">Part 1: Choose Any Tile</h2>
+
+<p>Therefore I will introduce <em>Q-Learning</em> visually and with some basic definitions.</p>
+
+<p>First we have the <em>universe:</em></p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.40.40-pm.png" alt="The Universe" /></p>
+
+<p>The <em>universe</em> encompasses everything in the visual above (and each of the visuals below). It is the entire world of our model. It contains all of the tiles, which are distinct locations. It also contains the <em>agent,</em> here the shown as the person symbol. The <em>agent</em> is an intelligence which is able to move from tile to tile, and in this case, represents ourself. The goal of the agent is to reach the <em>reward</em>, shown as the candy icon. The <em>agent</em> will proceed through the universe, to get to the <em>reward</em>. This is known as a trial, in which each trial begins with the agent at the starting point, moving from tile to tile, and ending at the <em>reward</em>. The <em>agent</em> will complete many trials, with the result of getting to the <em>reward</em> as efficiently as possible. Its experience in each trial run <em>reinforces its learning</em> so that it becomes better at locating the <em>reward</em>. The <em>reward</em> is just that, a location or item in the <em>universe</em> on a set tile which provides feedback to the agent.</p>
+
+<p>Obviously in the model many arrangements and rules can be preset, but for simplicity our agent will always start on the <em>starting tile</em>, noted by the play symbol, and the <em>agent</em> can move to any adjacent tile. The <em>reward</em> will always be on the same <em>reward tile.</em> The <em>agent</em> can’t see what is in any of the tiles until it has entered that tile, so it can’t see where the <em>reward</em> is, even if it is beside it. If it helps conceptually, imagine each tile is an empty, closed 4-wall room, and if there is an adjacent tile there will be a closed door to open on the corresponding wall. When the <em>agent</em> moves to an adjacent tile, it passes through one of the doors. The only exception is the reward tile which would be a room having the reward.</p>
+
+<p>The last definition is for <em>Q-values</em>. These are values our <em>agent</em> attributes to tiles (locations) at the end of each trial if it has crossed that tile in the past. These values represent a sort of connection to the reward which will become evident as the example progress. The <em>reward</em> tile always has a value of 1.0, and this is the highest value that no other tile can ever receive.</p>
+
+<p>As previously said, there is a looping of trials. At the start of each trial the <em>agent</em> will begin on the <em>starting tile</em> and move randomly from tile to tile until it finds the <em>reward</em>. Then understanding the path the agent took, it will update the <em>Q-Values</em> of those tiles. A new trial will begin. Eventually, given its understanding of the board, the agent will find the shortest path (or one of the shortest paths) to the reward.</p>
+
+<p>Here is Trial 1:</p>
+
+<p>To start, the <em>agent</em> will randomly pick a tile. Here it moves 1 tile right. The blue shows the highlighted path:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.51.05-pm.png" alt="Trial 1 - Step 1" /></p>
+
+<p>Again, it will continue to choose random tiles as it moves along, until it finally reaches the <em>reward.</em> By this point the agent has moves 2 tiles up.</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.51.09-pm.png" alt="Trial 1 - Step 2" /></p>
+
+<p>Now it has moved 3 tiles to the left, then 1 tile up</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.51.13-pm.png" alt="Trial 1 - Step 3" /></p>
+
+<p>Now 1 tile left, and 2 tiles up</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.51.16-pm.png" alt="Trial 1 - Step 4" /></p>
+
+<p>And finally 4 tiles right, reaching the reward</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-6.51.19-pm.png" alt="Trial 1 - Step 5" /></p>
+
+<p>The process will start anew this time except the <em>Q-Values</em> will be updated:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-7.12.52-pm.png" alt="Trial 1 - Q-Values Updated" /></p>
+
+<p>Now the <em>agent</em> is faced with a dilemma. Does it follow the path it now knows leads to the reward? Or does it choose to explore new paths?</p>
+
+<p>The <em>agent</em> does not know the shortest path to the <em>reward</em> is only 7 steps. It does know its first path is 13 steps. The only way to gauge this path is by another trial, but this risks taking an even longer route at the risk of wasting time to get a reward. Imagine for instance that our <em>agent</em> only gets 5 minutes to gather as many candies as it can, and moving between tiles requires 10 seconds. Exploring could cost it time which could otherwise be spent gathering rewards. But exploiting the only known path may be inefficient and a shorter path could be found allowing the <em>agent</em> to then gather more rewards in a shorter period (which we know as outside observers to be true in this case).</p>
+
+<p>We will explore this question, classically known as “Exploration vs Exploitation” and its connection to human behavior in the next section.</p>
+
+<h2 id="part-2-exploit-or-explore">Part 2: Exploit or Explore</h2>
+
+<p>This section explores how it is possible to understand complex human behaviors with simple Reinforcement Learning, a type of Machine Learning. Specifically Q-Learning. The previous section covered concepts in a basic Q-Learning model: <em>the universe</em>, <em>the agent</em>, <em>the reward</em>, and <em>tiles</em>. This section will cover the iterative <em>reinforcement</em> process, what <em>Q-Values</em> are, and the question of <em>Exploitation vs Exploration</em>. Ultimately, this is the final set-up for a discussion on modeling human behavior.</p>
+
+<p>But briefly, I will digress to explain a term that has wrongly been assumed to be understood: <em>model</em>. What we really are talking about here is modeling human behavior. What is a model then? In science, the term <em>model</em> is used to denote a representation for a system (ie a grouping of connected factors). Just like toy models, such as dolls or train sets, scientific models are simplified representations of the real thing which enable us to better understand the phenomenon and allow for accurate, but <em>not perfect</em> predictions. Something I struggled with for a long time was understanding why models are <em>not meant to predict with 100% accuracy</em> (excepting the simplest artificial systems). In fact, if a model predicts perfectly this is <em>bad</em>. A bit counter-intuitive. Isn’t what we want is to make perfect predictions? To know exactly how much snow is going to arrive, what the future cost of a house or profit on an investment will be, what decision someone will make? While that is the <em>ideal,</em> any model that does this fails on at least one of two conditions.</p>
+
+<p>In order to achieve perfect or near-perfect accuracy, either a model has incorporated too many variables, becoming too complex and unwieldy for intuition (the express purpose), or it is so perfectly fitted to a given group of observations (ie a dataset) that it no longer generalizes to other observations of the same phenomenon outside the originals. In short, a good model needs to be relatively accurate, simple enough to understand, and generalizable to future observations (and historic ones as well).</p>
+
+<p>In the last section, we paused our Q-Learning model after the first iteration, in which our agent took a random walk through tiles and eventually found the reward after 13 steps. After this journey, the agent updated the <em>explored</em> tiles with <em>Q-Values</em>.</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-20-at-7.12.52-pm.png" alt="Q-Values after first iteration" /></p>
+
+<p>There are two questions which presented themselves:</p>
+
+<ol>
+  <li>What are <em>Q-Values</em>?</li>
+  <li>In the second iteration, what <em>should</em> the agent do?</li>
+</ol>
+
+<h3 id="what-are-q-values">What are Q-Values?</h3>
+
+<p>In our context, <em>Q-Values</em> are the <em>expected reward</em> an agent has for a given tile. At the beginning, the agent had no preconceptions of the value of any tile. But now after an initial exploration and discovery of the reward location, the agent has realized a connection between explored tiles to the reward. There is no <em>intrinsic values</em> for the tiles themselves (beside the reward tiles), so <em>Q-Values</em> can be thought of as a sort of set of anticipated internal rewards.</p>
+
+<p>The reader will note that the <em>Q-Values</em> do not uniformly increased across the tiles. At the beginning, <em>Q-Values</em> only augment by 0.05 per tile, while the last tiles experience increases of 0.1 and 0.2. There are different ways the <em>Q-Values</em> can be updated after an iteration, and in this case a <em>discount factor</em> is applied. The “farther” a tile is from the reward, the greater the <em>Q-Value</em> will be discounted. In this case “farther” is not the true distance but the <em>perceived distance</em>. In short, tiles which are <em>believed</em> to be closest to the reward experience the least discount, we value them more, and those <em>believed</em> to be furthest receive the greatest discount. Why is this the case?</p>
+
+<p>There are several ways to conceptualize this, but here is a simple one: the agent is surest about the tiles it took closest to the reward, while those taken further away it is less certain about. Tying this momentarily to human behavior and reward, we are far more certain that the <em>action</em> of opening a bag of cookies will lead to getting cookies, the reward, than we are to the <em>action</em> of entering the the kitchen. After all, maybe the cookies are hidden or we forgot them in the car and they’re not in the kitchen at all.</p>
+
+<p>This hints at something I will come back to later. But here, <em>tiles</em> are shown to be <em>locations</em>. Really, a <em>tile</em> is a representation for an <em>action</em> in a given state.</p>
+
+<p>In summary, <em>Q-Values</em> are non-real, expected rewards for a given action (i.e. movement to a given tile). They are based on <em>experience</em>. <em>Q-values</em> can be assigned in various ways. One common method is using a discount factor, depreciating expectations relative to their perceived distance from the reward.</p>
+
+<h3 id="explore-or-exploit">Explore or Exploit?</h3>
+
+<p>Now we tackle the question of iterations: What should the agent do given that it knows a path to the reward? Out of context, this question doesn’t have a meaning. Without external pressures that affect the agent there is no reason to (or not to) repeat its initial behavior.</p>
+
+<p>But the real world doesn’t host ideal environments. There are pressures in every way. Among the infinite other pressures, it is uncertain if the reward will persist indefinitely or if it degrades with time, it is uncertain if the agent is competing against other agents, and it is uncertain how often the agent must find the reward to stay alive.</p>
+
+<blockquote>
+  <p>“…but, in this world, nothing is certain except death and taxes.”</p>
+
+  <p>Benjamin Franklin, Letter to Jean-Baptiste Le Roy, 1789</p>
+</blockquote>
+
+<p>Given a pressure, for example, that the reward will only last 60 seconds, how should the agent act to <em>maximize</em> rewards overall? First, it might be helpful to grasp what the limits are in this case: For a given 60 second test, what is the worst, the best, and the current time it takes to find the reward?</p>
+
+<p>Let us consider that each movement between a tile requires 2 seconds, and each iteration reset requires 1 second. Let us also assume in the calculation below the agent is allowed the first explorative iteration of 13 steps before the 60 second trial begins.</p>
+
+<p><em>One</em> of the best case scenarios is shown below. There are multiple best case, each requiring no more than 7 steps.</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-3.30.21-pm.png" alt="Best case scenario" /></p>
+
+<p>In this case, the total time required for each iteration is:</p>
+
+<p>7 steps × 2 sec + 1 sec = 15 seconds</p>
+
+<p>In 60 seconds, this means the agent can find 4 rewards, at most.</p>
+
+<p>One of the worst scenarios is below. Admittedly, I didn’t verify that this is the worst possible path, however, it requires 33 tile movements which means that within the 60 second period, the agent will never reach the reward:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-3.42.39-pm.png" alt="Worst case scenario" /></p>
+
+<p>In this case, the total time required for each iteration is:</p>
+
+<p>33 steps × 2 sec + 1 sec = 67 seconds</p>
+
+<p>As already mentioned, the known path requires 13 steps:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-3.44.59-pm.png" alt="Known path" /></p>
+
+<p>In this case, the total time required for each iteration is:</p>
+
+<p>13 steps × 2 sec + 1 sec = 27 seconds</p>
+
+<p>For 60 seconds, this means the agent can find the reward 2 times.</p>
+
+<p>In summary, with its current behavior, our agent will receive the reward twice in the given time period. At best the agent could improve this to 4 rewards, but at worst it will receive no rewards. And this is the heart of the problem: Should the agent decide to <em>explore</em> instead of <em>exploit</em> its current knowledge, it is unknown whether the new knowledge will benefit the agent or cost it time. Given the probabilistic choices, there is always a chance for either outcome.</p>
+
+<p>An astute reader might consider it is possible to calculate the likelihoods of choosing by chance a 7, 8, …, and X-step pathway to the reward given a random walk. Given the close proximity of the starting tile to the reward tile, it even appears without such an analysis it is far more likely to choose a shorter walk than a longer one. But such analyses miss the point that to the agent this is <em>external information,</em> unavailable to it. We could obviously advise the agent given our view point, but then why not push this limit of advice towards directing it to the reward?</p>
+
+<p>In this model, just as in life, it is difficult to determine the limits of the action space available to us, and just as the agent is blind to the location of the reward, we too are blind to the variety of rewards that may exist.</p>
+
+<p>The general solution to the exploration vs exploitation question is a tradeoff balance. Ultimately, the probabilities, universe characteristics, and initial experiences will always play a significant role in the success of the strategy employed. On one hand, the agent can be <em>greedy</em> which means that given a known solution it will tend to stick to that solution. On the other hand, it can be explorative and explore more than it exploits. The propensity to exploit or explore can be determined by a variable, which we may call <em>greediness</em>. We can assign it a probability such that at 0.50, a given iteration has equal chances of either repeating the best known iteration or choosing to explore. At 1.0 <em>greediness,</em> that is <em>maximum greediness</em>, the agent will always exploit the best known pathway.</p>
+
+<p>Our timed example has very stringent requirements. Even with the best known pathway, the agent only gets to iterate over the given universe 4 times. At the worst pathway, only once (and never actually finish). In typical reinforcement learning, hundreds to many thousands of iterations take place, and in comparison with our own lives, we repeat our behaviors just as many times. Consider, just how many times have you practiced saying the word “the”?</p>
+
+<p>Given the agent’s initial experience in our example, it might be considered acceptable to have an extremely greedy policy given a working solution. Why risk exploring and getting no reward when 2 rewards are guaranteed? But what if our time limit extended to 60 minutes, not 60 seconds? The best path would result in 240 rewards, and our current path only 133. In this case the pressures appear lenient enough on the agent that a more explorative behavior will have a veritable opportunity to provide higher returns in the long run.</p>
+
+<p>It must be noted that our example is very, very simple. In realistic reinforcement learning models, it must be considered that explorations need not be totally random, and there exist smart algorithms to help the agent navigate to the reward faster. In one algorithm for instance, the lower the Q value of a given tile, the greater the agent might be encouraged to explore. Whereas, when the agent is on a tile near to the reward, which due to the lower discount factor will have a higher Q value, the agent is less likely to explore because the certainty of obtaining the rewarding already quite high.</p>
+
+<h3 id="the-iterative-process-and-updating-q-values">The Iterative Process and Updating Q-Values</h3>
+
+<p>The best way to further explore reinforcement learning and how it can be used to model human behavior is through iterating over the trials so see how this plays out in the long run. Let us assume on the next trial the agent decides to exploit, and takes the same pathway as before:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-4.49.37-pm.png" alt="Exploiting the known path" /></p>
+
+<p>How does the agent update the Q-Values? Do they even change since we already were aware of this path? Yes, they do.</p>
+
+<p>Now that the same pathway has been taken with success again, the agent has a higher certainty this is a path which leads reliably to the reward. Remember, our example is very simple, but even small changes can cause major effects. For instance, imagine if on every third trial, the reward changes position. Then the expected path way may no longer be as efficient, and possibly far from it! But we will stick with a simple, static reward. Because there were already previous non-zero Q-Values, the values will change but not as strongly as if the initial estimate was zero. Remember, Q-Values are anticipated rewards. In the first iteration, the agent has no expectation the taken tiles would lead to a reward, wheraas now some expectation already existed:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-4.54.57-pm.png" alt="Updated Q-Values after exploitation" /></p>
+
+<p>Now imagine on the next trial, the agent explores and takes the following path:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-4.56.41-pm.png" alt="Exploring a new path" /></p>
+
+<p>How do we update the following Q-Values, and take account of the previous Q-Values on tiles not explored on this iteration? Again, there are many solutions to this but one way is to update the path taken as normal, and apply a <em>forgetting discount</em> to all of the tile <em>not taken</em> during this iteration. By applying a <em>forgetting discount</em> to untaken tiles, our agent takes into account the most recent experiences of the agent (remember the universe can change), but also makes better knowledge more likely to become pertinent in the face of an excessively greedy policy. In this case, an even 0.05 decrement of the Q-values is taken across all untaken tiles to “forget” them.</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-26-at-5.00.27-pm.png" alt="Q-Values with forgetting discount" /></p>
+
+<h3 id="what-will-happen-in-the-long-run">What will happen in the long run?</h3>
+
+<p>Below is a hand-made (artificial for an artificial system!) plot of what the expected Q-Values might be after many iterations, with a somewhat ambivalent greedy policy (typically exploit, but some times explore). The settled path is marked in blue. We observe that at each possible step, the agent moves towards the subsequent tile with the highest Q-value.</p>
+
+<p>The agent has identified one of the best routes, and it follows this route at least half the time. It also has high Q-scores along many of the other shortest paths. And the agent has also identified the tiles which are not very likely to get it to the reward in the most efficient manner.</p>
+
+<p>(There is one mistake tile, can you spot it?)*</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-01-27-at-6.45.41-pm.png" alt="Long-run Q-Values" /></p>
+
+<p>*Mistake tile is the one to the left of the starting tile.</p>
+
+<h3 id="sowhats-the-point">So…What’s the point?</h3>
+
+<p>There are two key take aways from this section:</p>
+
+<ol>
+  <li>Given an appropriate greediness policy, and enough time, an agent will converge on an optimal sequence of tiles (ie actions)</li>
+  <li>With enough exploration and trials, behaviors that work but are not optimal will be pruned (ie forgotten)</li>
+</ol>
+
+<p>The point of this rather large build-up to introduce Reinforcement Learning (Q-Learning variant here) and its connection with human behavior will be explored in the following sections.</p>
+
+<h2 id="part-3-but-what-about-the-real-world">Part 3: But What About the Real World?</h2>
+
+<p><em>“Inside of me there are two dogs. One is mean and evil and the other is good and they fight each other all the time. When asked which one wins I answer, the one I feed the most”</em> - Attributed to Sitting Bull</p>
+
+<p>In the last section on Reinforcement Learning and Human Behavior, I covered the question of “exploration versus exploitation,” the problem of deciding to follow past successful behavior or to search the environment for other possible ways to succeed. This included understanding that this behavioral decision is context driven, and as a rule, there are no true solutions, only trade-offs. A balance between exploiting and exploring must be reached. With such a balance, given enough time (and lack of hard pressures like death) the agent will arrive at an optimal or near-optimal solution.</p>
+
+<p>Something I forgot to discuss in detail in the previous section is that this decision to explore or exploit can also be time dependent. In the example from before, we considered a single variable <em>greediness</em> that was equivalent to a coin toss on each trial. The result of this coin toss dictated whether the agent exploited, went for the reward on its best known route, or explored, seeking the environment for a reward in a non-optimally believed route. Consider however that this <em>greediness</em> variable can itself vary with time. In an environment which does not change, or changes little over long periods, it is best to be most explorative in the beginning and then very greedy later after the environment and most of the paths (seem to) have been explored. Otherwise, high greediness from the start is less likely to find the optimal path in the long run because fewer avenues will be explored. To explain this more technically, consider this: the chances of selecting the optimal path is the number of optimal paths over all possible paths. Of course, even if the agent selects this optimal path on the very first run (a very low possibility), it has no knowledge as to if it is the optimal path. The chances of the agent finding the optimal path is therefore:</p>
+
+<p><img src="/assets/images/rl-behavior/screen-shot-2024-02-11-at-5.07.34-pm.png" alt="Chance of finding optimal path equation" /></p>
+
+<p>I only bring this very simple math equation here to highlight that the factor of ‘Paths Explored’ clearly impacts the chances of Finding the Optimal Path (albeit in a simplified example). But each time the agent takes a new path is like collecting a new lottery ticket number, and the more lottery tickets one has, the better the chance of winning.</p>
+
+<p>Of course, not all environments are static or change slowly. Environments themselves can vary with time, sometimes changing greatly over the given period, or changing slowly most of the time, then a whole lot all at once, or sometimes the environment flip-flops between cyclic states (as described earlier where every 3rd trial the reward might change tiles). Therefore, the way <em>greediness</em> should vary depends on the how the environment changes. The above equation of the Chance of Finding the Optimal Path does not hold in a constantly changing environment. If the agent stopped exploring in a changing environment, it will soon find the optimal path is not so optimal.</p>
+
+<p>With this overall general framework for Reinforcement Learning, it’s time connect it with concrete examples in the real world. Perhaps the easiest introduction to this is by revealing the closest approximation for the earlier, simple Reinforcement Learning example. This example is akin to a laboratory mouse in a maze, looking for a piece of reward cheese. In fact, it’s almost an idealized version of it.</p>
+
+<p>Here’s an example diagram of such a mouse maze overlayed on the example. Dark blue lines are walls.</p>
+
+<p><img src="/assets/images/rl-behavior/image.png" alt="Mouse maze overlay" /></p>
+
+<p>Just as in our example with the agent, the first time a mouse enters the trial maze it will have no previous knowledge on how to navigate the maze to find the reward. Of course, in the real world, depending on how the maze is designed and used and what the reward at the end may be (food, water, an exit, etc.), various factors might influence the initial behavior.</p>
+
+<p>For instance if the reward is a smelly cheese, this might give some general direction to the mouse who has a keen nose. Although, it can easily be imagined that in certain maze designs, such as this one, the smell could draw the mouse physically closer to the reward, but further from the path that accesses that reward. In this case, the smell of cheese would attract the rat to two potential dead-ends which would never let it get the cheese, while the path which goes furthest from the smell is that which leads to the reward. Smelly cheese is not the only possible factor: lighting, smell of mice that may have previously passed through the maze, and so on. But generally speaking, on the first run, the mouse is a <em>tabula rasa</em>. And only after a series of repeated runs through the maze will the mouse become accustomed to the best path, that which allows it to access the reward in the fastest time and with the least amount of movement (i.e. avoiding false corridors or passages).</p>
+
+<p>It can be said that this is not a true real world example, for after all, the whole maze is an idealized real world situation. Where in the world are there straight corridors, perfect corners, square dead ends, and a little piece of cheese at the end, all in mouse size dimensions? Well, no where. But we have gone from a completely theoretical model, to a real-world model, and now we can consider that this also extends to the real world.</p>
+
+<p>The framework for Q learning which has been presented can be extrapolated to many other problems, big and small. Instead of tile placements representing spaces, again consider each tile as an action. One of the earlier examples was to remind yourself how many times in your life you’ve said the word “the”. Each time you’ve said this word, you are in a sense running through the maze of matching the correct motor control of your mouth and tongue in order to arrive at the “best” pronunciation of “the.”</p>
+
+<p>Anyone who has had small children of their own or been around them while they are in the cusp of speaking their first words will realize (if they did not already) that baby babbling isn’t nonsense. It is the equivalent of the mouse moving through the maze. The child babbling is them slowly understanding the associations between different tongue positions, their timing, and breath controls to various sounds, and slowly matching these sounds to those in their maternal language.</p>
+
+<p>Try and say the word “mom” and count the number of identifiable steps going on in your mouth and breath in order to pronounce this one word. Then, even for the first couple steps you identify, consider all of the other possible actions that you could have done instead. These are all the other tiles (actions) that could have been taken. Consider that this one simple word which we often look for as one of the first words out of a child mouth, probably took your very self over a year to learn to pronounce. And you almost certainly didn’t do it very well at first either. This example primarily demonstrates a motor problem (i.e. how to move parts of the body), but we can extend this to larger human behaviors.</p>
+
+<p>Consider for instance how you first learned to do a handshake. Or ride a bike. How to tie your shoe. All of these require a series of progressive steps in order to achieve success. For each of these examples, how many tries did you require before being succesful? Considering handshakes, how long before you could do a non-awkward one (if you’ve managed), and consider this, how many awkward handshakes do you still experience at this point in your life?</p>
+
+<p>“Everything is hard before it is easy” – Attributed to Johann Wolfgang von Goethe</p>
+
+<p>Something to remember is that for each of these tasks, the learning process never ends. Each time you are exposed to these problems, and others like them, the world and yourself have always changed a little, and we are always striving for optimality.</p>
+
+<p>While we have only considered rewards so far in our Reinforcement Learning example, it is now time to introduce the anti-reward: punishments. These are objects, situations, etc. in short stimuli that we (and agents) want to avoid. In the below example, it is the smiley face.</p>
+
+<p><img src="/assets/images/rl-behavior/image-1.png" alt="Punishment introduced" /></p>
+
+<p>This is pretty straightforward concept (and should’ve been introduced earlier).</p>
+
+<h2 id="part-4-is-this-really-worth-learning-about">Part 4: Is This Really Worth Learning About?</h2>
+
+<p>After reading all of this, one might think: that was a lengthy explanation for what could have been said in a few sentences: “There are things that people like and dislike. When people find a way to get the things they like, they will repeat that behavior, and the opposite for things they find displeasing.” One might even go so far as to include, “And it’s important to sometimes explore sometimes, because that’s how people find new things they like or better ways to get the things they already like.”</p>
+
+<p>And all of this is true. But this summarization misses the purpose of a model because it lacks the information that makes a model useful. What are the two main purposes of a model? To predict and to allow for better understanding. The summarization might seem to do that, but it lacks the <em>how.</em> People might repeat behaviors that lead to a previously pleasing experience, but how does that happen? How does this summarization give us insight to the underlying process?</p>
+
+<p>Exploring concrete examples which illustrate this <em>how</em> will make clear why it is worth the effort of understanding reinforcement learning. The first case we will consider are addictive or “unwanted” behaviors. It is easy to conceptualize how such behaviors arise, both by the summarization above, but also from our simple RL example. Imagine once again we return to our initial agent who already has found an optimal path, but sometimes explores:</p>
+
+<p><img src="/assets/images/rl-behavior/image-2.png" alt="Agent with optimal path" /></p>
+
+<p>Then, at some point, a new “reward” enters the environment:</p>
+
+<p><img src="/assets/images/rl-behavior/image-3.png" alt="New reward appears" /></p>
+
+<p>Recall, the agent is blind to changes but eventually given enough time, chance, and an explorative behavior it will find the new reward. In this case, the new “reward” is much closer and easier to get, requiring only 4 steps. Not only that, but maybe the value of this reward is even higher than the typical reward. The result is that the agent begins to take a shortcut (shown in red) and since the maximum value that can ever be a experienced is a value of 1, the original reward’s value is normalized, meaning it becomes lower in this case, say 0.75. It no longer has the same ‘oomph.’</p>
+
+<p><img src="/assets/images/rl-behavior/image-4.png" alt="Agent taking shortcut to new reward" /></p>
+
+<p>The summarization can explain this change in behavior, “When people find a way to get the things they like, they will repeat that behavior…,” but the model clarifies several external observations, and makes predictions. First, we gain an understanding of how an extreme stimuli (i.e. heroin) can make the everyday pleasures muted. In this case, the original reward, say a piece of candy, lost 25% of its value. This is because the most reward the agent can ever experience is limited to a maximum of threshold. Should new rewards be introduced, all the values are normalized, meaning they are all scaled the the highest value is no greater than 1.0. Second, we see why the agent began to display addictive behavior. Compared with the original reward which required 7 moves, this new reward only requires 4, in addition to the newer reward having a greater relative value. If we were to run this through the 60 second trial, it could receive the new reward 6 times (2 times or 50% more than the previous optimal route). And finally, and the most importantly for this piece, is that the model helps us understand how to best break out of an addictive or unwanted behavior.</p>
+
+<p>The worst thing an individual can do when they have recognized they are in the sequence of events which completes an addictive behavior is to complete it. It of course may come into the mind of any individual, “This will be the last time, then I’ll stop,” or “Just this last one.” Most of us can recognize this, anything from hard addictions to drugs, to trying to improve our diets and cutting out junk food, to escaping the doom scroll. When an agent (or you) complete that “one last time,” nothing is gained except <em>reinforcing</em> the same behavior. It only makes it more difficult to quit the next time because the memory of how to achieve this reward just got stronger.</p>
+
+<p>The best method for escaping an addiction is to break out of the behavioral pattern once it has started. Breaking out of the path, like choosing a new tile and a new route, weakens that “addiction shortcut”. And at the same time it strengthens a new one.</p>
+
+<p>Besides addictions, our reinforcement learning model helps us to explain why people struggle to create new habits or try things in a new way, which the summarization does not. According to the Q-Model, there is an “inherit” reward in doing things the same way (i.e. selecting the same tiles). In our model, the Q-values, although not a real rewards, are the anticipated or expected reward of doing the action. Every time you begin a behavior you are accustomed to doing, there is a chain of anticipated rewards for each step. To stop, or to start practicing a new route is difficult because the anticipated reward suddenly drops. This may seem “woo” but research has indicated that among individual temporary given control of intracranial stimulation, they are most likely to active the region which does not in fact produce sensations of pleasure, but the sensation of anticipation [citation needed].</p>
+
+<p>Models aren’t perfect. Q-Learning is not even generally mentioned as a method for describing complex human behaviors.</p>
+
+<h3 id="things-that-q-learning-and-this-model-have-not-covered">Things that Q-Learning and this model have not covered:</h3>
+
+<ol>
+  <li>
+    <p>We have not included discussions on neuroeconomics, and what is the “cost benefit” analysis of any action.</p>
+
+    <blockquote>
+      <p>“Economics is the study of the use of scarce resources which have alternative uses.”</p>
+
+      <p>Thomas Sowell, Basic Economics, 2000</p>
+    </blockquote>
+
+    <p>For instance, some of us at one time or another might have had the experience of putting something off, which once we finally begin, we may continue to do for a lengthy period of time beyond that which we initially agreed with our selves. This paradoxical change is not explained in our model, because we ourselves know we are bound to repeat this same behavior. Familiar examples might include practicing an instrument, cleaning, and yard work.</p>
+  </li>
+  <li>
+    <p>We have not explored what exactly constitutes a “reward” or a “punishment”. How does the agent define these exactly? Why is it that in humans, the same stimuli might be a “reward” to one, but a “punishment” to another? Why are rewards normalized?</p>
+  </li>
+  <li>
+    <p>How is it that addiction relapses happen? This is perhaps a fault with such a simplified model, although I’m not personally aware of how this is implemented in more advanced ones. In our example, there is an equal forgetting over time, so eventually the addiction shortcut is forgotten. This is not normally the case for most addictions, for even years after avoiding the addictive reward, a single new consumption can instantly reignite that addictive behavioral pattern (though this is not always the case, and hard addictions are a complex topic in themselves).</p>
+  </li>
+</ol>
+
+</div>
+
+
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/articles/design-gear/filbe-vs-kahakka/">
+            Assault Pack Design Review: <br> FILBE vs Kahakka
+            <small>01 Feb 2026</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2024/03/03/Introduction-to-Logic-Chapter-1/">
+            Chapter 1 Solutions
+            <small>03 Mar 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2024/01/24/Introduction-to-Logic-Introduction/">
+            An Introduction to LOGIC and SCIENTIFIC METHOD<br>The What and Why
+            <small>24 Jan 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

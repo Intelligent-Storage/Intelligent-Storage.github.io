@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Architecture &middot; Intelligent Storage
+    
+  </title>
+
+  
+  <link rel="canonical" href="http://localhost:4000/articles/architecture/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/Thinker.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/Thinker.png">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+
+  <link rel="stylesheet" href="/public/css/custom.css">
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+    
+    <!-- Main navigation pages (excluding home) -->
+    
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/articles/">Articles</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+        
+      
+    
+      
+        
+      
+    
+    
+    <a class="sidebar-nav-item" href="http://localhost:4000/posts/">Posts</a>
+    
+    <!-- Articles Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item active" href="http://localhost:4000/articles/">Articles</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/human-behavior/">→ Human Behavior</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem active" href="http://localhost:4000/articles/architecture/">→ Architecture</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/articles/design-gear/">→ Design + Gear Review</a>
+      </div>
+    </div>
+    
+    <!-- Projects Section with Submenu -->
+    <div class="sidebar-nav-group">
+      <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+      <div class="sidebar-submenu">
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/logic-scientific-method/">→ Logic & Scientific Method</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/self-change/">→ Self-Change</a>
+        <a class="sidebar-nav-item sidebar-nav-subitem" href="http://localhost:4000/projects/mapping-maneuvers/">→ Mapping Maneuvers</a>
+      </div>
+    </div>
+    
+    <!-- Book Reviews Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/book-reviews/">Book Reviews</a>
+    
+    <!-- Gallery Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/gallery/">Gallery</a>    
+    
+    <!-- Stories Section -->
+    <a class="sidebar-nav-item" href="http://localhost:4000/stories/">Stories</a>
+    
+    <span class="sidebar-nav-item">Currently v1.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2026. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Intelligent Storage</a>
+            <small>Cultivating sensitivity to difficulties</small>
+          </h3>
+          <nav class="top-nav">
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/about/">About</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/posts/">Posts</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link active" href="/articles/">Articles</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/projects/">Projects</a>
+  </div>
+  
+  <div class="top-nav-item">
+    <a class="top-nav-link" href="/book-reviews/">Book Reviews</a>
+  </div>
+  
+    <div class="top-nav-item">
+    <a class="top-nav-link" href="/gallery/">Gallery</a>
+  </div>
+  
+</nav>
+
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 style="text-align: center; margin-bottom: 1rem;">Architecture</h1>
+  
+  <p style="text-align: center; font-size: 1.1em; margin-bottom: 3rem; color: #6a6a5a;">
+    Examining buildings and spatial experiences - real and virtual
+  </p>
+
+  <div class="article-grid">
+    <!-- Modernized Georgian Farm House -->
+    <a href="/articles/architecture/modern-georgian-farmhouse/" class="article-card" style="background-image: url('/images/articles/architecture/modern-georgian-farmhouse.png');">
+      <h3 class="article-card-title">Modernized Georgian Farm House</h3>
+    </a>
+  </div>
+
+</div>
+
+<style>
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  .article-card {
+    background: var(--soft-white);
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 250px;
+    aspect-ratio: 0.7;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .article-card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--retro-pink);
+    box-shadow: 0 8px 20px rgba(212, 86, 140, 0.3);
+  }
+
+  .article-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 35%, transparent 100%);
+    z-index: 1;
+  }
+
+  .article-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF !important;
+    margin: 0;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  /* Responsive: Stack on smaller screens */
+  @media (max-width: 768px) {
+    .article-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .article-card {
+      min-height: 180px;
+    }
+  }
+
+  /* Responsive: 2 columns on tablets */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>
