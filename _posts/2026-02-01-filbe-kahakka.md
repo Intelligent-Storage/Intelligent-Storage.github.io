@@ -69,7 +69,7 @@ simple compartment system ensures quick and effective organization. Its J-Zip pr
 great ease-of-access. In contrast, the Kahakka's top flap closure is inconvenient, especially for items
 at the bottom of the pack. The hunter's green PU inner lining makes visibility in the compartment
 difficult. For long term combat usage and poor weather, the 
-Kahakka's design <i>may be</i> better because of improved defense against the elements,
+Kahakka's design <i>may</i> be better because of improved defense against the elements,
 excepting a lack of drainage grommets.
 </p>
 
@@ -100,6 +100,10 @@ the decision comes down to season, and carry needs. In hot weather or heavy carr
 the FILBE is my choice. For cold weather and general travel, the Kahakka is better.
 </p>
 
+As of 02/2026, I am working on a redesign of my Kahakka based on my experiences,
+most of which are noted here. I intend to bring it to a tailor for modifications,
+making it more practical. 
+
 </div>
 
 ## Introduction and History
@@ -109,7 +113,7 @@ Therefore, I'll be concise with the history.
 
 The Family of Improved Load Bearing Equipment (FILBE) Assault Pack (AP) was first fielded
 by the USMC sometime in [2011-2012](https://www.militarytimes.com/off-duty/gearscout/kit/2020/02/11/looking-for-a-kickass-new-backpack-consider-the-tried-and-true-marine-corps-filbe/).
-As of 02/2026 (right now), it is still the AP in service for the USMC. It was produced by both
+As of 02/2026 (time of writing), it is still the AP in service for the USMC. It was produced by both
 Eagle Industries and Propper International. Only in late 2024 did it become available for
 consumer purchase from Propper. However, it was available as military surplus as early
 as 2013-2014.
@@ -147,11 +151,12 @@ like it's not you anymore," they said.
 <br>
 
 Unfortunately, after 9 years of wear-and-tear, my original FILBE needed to be
-replaced. It wasn't so much the standard usage which got it, but an early accident.
-I left it against a radiator in a caravan (that wasn't supposed to work), waking
-during the middle of the night to the odor of burning plastic. The melted holes
-became weak points no patching seemed to resolve. Eventually, one huge tear
-formed at the top of the bag, perpetually letting in rain.
+replaced. It wasn't so much the standard usage which got it, but an accident within
+the first months of purchase. I left it against a radiator in a caravan 
+(that wasn't supposed to work), waking during the middle of the night to the 
+odor of burning plastic. The melted holes became weak points no patching seemed 
+to resolve. Eventually, one huge tear formed at the top of the bag, perpetually 
+letting in rain.
 
 <div style="text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/img_20241012_134519.jpg" alt="The rip" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
@@ -167,7 +172,8 @@ fill. My FILBE had been part of my life for just shy of a decade. I knew it insi
 and out.
 
 Buying a new one seemed the obvious choice. But, a new FILBE direct from Propper
-would cost $180. Used ones could be had for much less. "Like-new" ones however
+would cost $180, a frustrating price given how much I originally paid. 
+Used ones could be had for much less. "Like-new" ones however
 were not acceptably cheaper to risk getting <span class="footnote-ref">one with holes<span class="footnote-tooltip">It was not possible at the time to physically visit a military surplus store that might have one for physical inspection.</span></span>, likely leading to the
 same demise as the previous. 
 
@@ -195,7 +201,7 @@ police, and recreational use in "extreme-environments."
 
 
 <br>
-<p style="text-align: center;"><b>If that doesn't convince you to buy one of their products (or want to be Finnish), well then, you're clearly not me.</b></p>
+<p style="text-align: center;"><b>If that clip doesn't convince you to buy one of their products (or want to be Finnish), <br> well then, you're clearly not me.</b></p>
 <br>
 
 
