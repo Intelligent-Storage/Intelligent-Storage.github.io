@@ -30,7 +30,7 @@ reasoning behind the design decisions and if the justifications are warranted. <
     <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Propper FILBE</p>
   </div>
   <div style="width: 33%; text-align: center;">
-    <img src="/images/articles/design-review/filbe-kahakka/Kahakka-savotta.png" alt="Image 2" style="width: 100%; height: 300px; object-fit: contain; transform: scale(1.3);">
+    <img src="/images/articles/design-review/filbe-kahakka/kahakka-savotta.png" alt="Image 2" style="width: 100%; height: 300px; object-fit: contain; transform: scale(1.3);">
     <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Savotta Kahakka</p>
   </div>
   <div style="width: 33%; text-align: center;">
@@ -232,37 +232,166 @@ Below is a detailed specifications comparison of the FILBE vs Kahakka. Color cod
 <span style="color: #d4a017;">**Yellow**: Questionable or Uncertain</span>  
 <span style="color: red;">**Red**: Bad</span>
 
-|  | **FILBE Assault Pack** | **Savotta Kahakka 25L** |
-|---|---|---|
-| **Year, Dimensions, Materials** | | |
-| **Initial Production Year** | 2011-2012 | 2024 |
-| **Weight** | <span style="color: red;">1.77kg (3.90 lbs)</span> | <span style="color: blue;">1.30 kg (2.87 lbs)</span> |
-| **Size (L)** | Main: 23 L<br>Patch Pocket: 6 L<br>Total Estimated: <span class="footnote-ref">29L* (35L)<span class="footnote-tooltip"> 29L is according to documentation. 35L is estimated by both myself and The Outdoor Gear View </span></span> | Main: 25L<br>Side Pouches (x2) = 3L<br>Total Estimated: 31 L |
-| **Height** (minimum) | 50.8 cm (20 in) | 48 cm (18.9 in) |
-| **Width** | <span style="color: red;">35.6 cm (14 in)</span> | <span style="color: blue;">27.5 cm (10.8 in) (with empty side pouches)</span> |
-| **Depth** (maximum) | 20.3 (8 in) | 19 cm (7.5 in) |
-| **Material** | <span style="color: #d4a017;">600 D Nylon</span> | <span style="color: blue;">1000D Cordura, 500D Cordura for back fabric</span> |
-| **Compartment and Pockets** | | |
-| **Pockets** | <span style="color: blue;">1 Patch Pocket (6L) containing: {1 Flat Mesh Pocket}<br>Inside Main: {1 Flat Mesh Pocket<br>1 Large Canteen Pocket<br>1 Small Canteen Pocket<br>1 Zippered Back Plate Pocket}</span> | <span style="color: #d4a017;">1 Patch Pocket (very small)<br>1 Flat Pocket (small)<br>2 Expandable Side Pouches (3L)<br>Open Top Back Plate Pocket</span> |
-| **Main Compartment Opening** | <span style="color: blue;">J Zipper</span> | <span style="color: #d4a017;">Fold Top Lid</span> |
-| **Interior Compartment Lining** | No | <span style="color: blue;">Yes (Black PU Material)</span> |
-| **Radio / Water Bladder Pouch** | Yes (Strap) | <span style="color: #d4a017;">Yes (Elastic Band)</span> |
-| **Water Bladder Hanger** | <span style="color: red;">No</span> | <span style="color: blue;">Yes</span> |
-| **Drainage Grommets** | <span style="color: blue;">Yes</span> | <span style="color: red;">No</span> |
-| **Straps, Buckles, and Zippers** | | |
-| **Side Straps** / **Compression Straps** | <span style="color: blue;">2 Straps (Quick Release Buckle)</span> | 2 Straps (G-Hooks) |
-| **Bottom Compression Straps** | Yes (Quick Release Buckle) | Yes (QR Buckle, clips to main lid) |
-| **Shoulder Strap Quick Release** | <span style="color: blue;">Yes (Quick Release Buckle)</span> | <span style="color: red;">No</span> |
-| **Hip Belt Buckle Type** | Quick Release | Berg Buckle Belt |
-| **Hip Belt Buckle Height** | ~40mm | 50mm |
-| **Zipper Protection** | <span style="color: blue;">Rubberized Cover (possibly Aquaguard by YKK)</span> | Zipper Flaps (i.e. fabric covering) |
-| **BackPlate** | | |
-| **Removable Back Plate Insert** | <span style="color: #d4a017;">Yes/No</span> | <span style="color: blue;">Yes</span> |
-| **Standard Back Plate Insert** | Rigid Plastic Insert x2<br>Parallel 1cm Closed Cell Foam Strips | 1 cm Closed Cell Foam |
-| **Easy Access to Back Plate** | <span style="color: #d4a017;">Yes/No</span> | <span style="color: blue;">Yes</span> |
-| **Other (NIR, NATO)** | | |
-| **Near Infrared Reduction Compliant** | <span style="color: #d4a017;"><span class="footnote-ref">Probable<span class="footnote-tooltip">Probably because I can't find confirmation, except for updated webbing for the FILBE which is marketed as being NIR compliant. It may be newer production is NIR compliant as this wasn't important a decade ago.</span></span></span> | <span style="color: blue !important;">Confirmed</span> |
-| **NATO Stock Number (NSN)** | 8465-01-600-7911 | 8465-58-002-0196 |
+<table>
+  <thead>
+    <tr>
+      <th style="background-color: rgba(212, 86, 140, 0.3); padding: 1rem; position: relative;"></th>
+      <th style="background-color: rgba(212, 86, 140, 0.3); padding: 1rem; text-align: center; position: relative; font-size: 1.2em;">
+        <strong>FILBE Assault Pack</strong>
+        <div style="width: 70%; height: 3px; background-color: var(--golden-yellow); margin: 0.5rem auto 0 auto;"></div>
+      </th>
+      <th style="background-color: rgba(212, 86, 140, 0.3); padding: 1rem; text-align: center; position: relative; font-size: 1.2em;">
+        <strong>Savotta Kahakka 25L</strong>
+        <div style="width: 70%; height: 3px; background-color: var(--golden-yellow); margin: 0.5rem auto 0 auto;"></div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="3" style="text-align: center; background-color: rgba(212, 165, 71, 0.2); font-weight: bold; padding: 0.75rem;"><strong>Year, Dimensions, Materials</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Initial Production Year</strong></td>
+      <td>2011-2012</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td><strong>Weight</strong></td>
+      <td><span style="color: #d4a017;">1.77kg (3.90 lbs)</span></td>
+      <td><span style="color: blue;">1.30 kg (2.87 lbs)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Size (L)</strong></td>
+      <td>Main: 23 L<br>Patch Pocket: 6 L<br>Total Estimated: <span class="footnote-ref">29L* (35L)<span class="footnote-tooltip"> 29L is according to documentation. 35L is estimated by both myself and The Outdoor Gear View </span></span></td>
+      <td>Main: 25L<br>Side Pouches (x2) = 3L<br>Total Estimated: 31 L</td>
+    </tr>
+    <tr>
+      <td><strong>Height</strong> (minimum)</td>
+      <td>50.8 cm (20 in)</td>
+      <td>48 cm (18.9 in) (or 40cm at smallest)</td>
+    </tr>
+    <tr>
+      <td><strong>Width</strong></td>
+      <td><span style="color: red;">35.6 cm (14 in)</span></td>
+      <td><span style="color: blue;">27.5 cm (10.8 in) (with empty side pouches)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Depth</strong> (maximum)</td>
+      <td>20.3 (8 in)</td>
+      <td>19 cm (7.5 in)</td>
+    </tr>
+    <tr>
+      <td><strong>Material</strong></td>
+      <td><span style="color: #d4a017;">600 D Nylon</span></td>
+      <td><span style="color: blue;">1000D Cordura, 500D Cordura for back fabric</span></td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" style="text-align: center; background-color: rgba(212, 165, 71, 0.2); font-weight: bold; padding: 0.75rem;"><strong>Compartment and Pockets</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Pockets</strong></td>
+      <td><span style="color: blue;">1 Patch Pocket (6L) containing: {1 Flat Mesh Pocket}<br>Inside Main: {1 Flat Mesh Pocket<br>1 Large Canteen Pocket<br>1 Small Canteen Pocket<br>1 Zippered Back Plate Pocket}</span></td>
+      <td><span style="color: #d4a017;">1 Patch Pocket (very small)<br>1 Flat Pocket (small)<br>2 Expandable Side Pouches (3L)<br>Open Top Back Plate Pocket</span></td>
+    </tr>
+    <tr>
+      <td><strong>Main Compartment Opening</strong></td>
+      <td><span style="color: blue;">J Zipper</span></td>
+      <td><span style="color: #d4a017;">Fold Top Lid</span></td>
+    </tr>
+    <tr>
+      <td><strong>Interior Compartment Lining</strong></td>
+      <td>No</td>
+      <td><span style="color: blue;">Yes </span><span style="color: red;">(Hunter's Green PU Material)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Radio / Water Bladder Pouch</strong></td>
+      <td>Yes (Strap)</td>
+      <td><span style="color: #d4a017;">Yes (Elastic Band)</span></td>
+    </tr>
+    <tr>
+      <td><strong>Water Bladder Hanger</strong></td>
+      <td><span style="color: #d4a017;">No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Drainage Grommets</strong></td>
+      <td><span style="color: blue;">Yes</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" style="text-align: center; background-color: rgba(212, 165, 71, 0.2); font-weight: bold; padding: 0.75rem;"><strong>Straps, Buckles, and Zippers</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Side Straps</strong> / <strong>Compression Straps</strong></td>
+      <td><span style="color: blue;">2 Straps (Quick Release Buckle)</span></td>
+      <td>2 Straps (G-Hooks)</td>
+    </tr>
+    <tr>
+      <td><strong>Bottom Compression Straps</strong></td>
+      <td>Yes (Quick Release Buckle)</td>
+      <td>Yes (QR Buckle, clips to main lid)</td>
+    </tr>
+    <tr>
+      <td><strong>Shoulder Strap Quick Release</strong></td>
+      <td><span style="color: blue;">Yes (Quick Release Buckle)</span></td>
+      <td><span style="color: red;">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Type</strong></td>
+      <td>Quick Release</td>
+      <td>Berg Buckle Belt</td>
+    </tr>
+    <tr>
+      <td><strong>Hip Belt Buckle Height</strong></td>
+      <td>~40mm</td>
+      <td>50mm</td>
+    </tr>
+    <tr>
+      <td><strong>Zipper Protection</strong></td>
+      <td><span style="color: blue;">Rubberized Cover (possibly Aquaguard by YKK)</span></td>
+      <td><span style="color: blue;">Zipper Flaps (i.e. fabric covering)</span></td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" style="text-align: center; background-color: rgba(212, 165, 71, 0.2); font-weight: bold; padding: 0.75rem;"><strong>BackPlate</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Removable Back Plate Insert</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Standard Back Plate Insert</strong></td>
+      <td>Rigid Plastic Insert x2<br>Parallel 1cm Closed Cell Foam Strips</td>
+      <td>1 cm Closed Cell Foam</td>
+    </tr>
+    <tr>
+      <td><strong>Easy Access to Back Plate</strong></td>
+      <td><span style="color: #d4a017;">Yes/No</span></td>
+      <td><span style="color: blue;">Yes</span></td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" style="text-align: center; background-color: rgba(212, 165, 71, 0.2); font-weight: bold; padding: 0.75rem;"><strong>Other (NIR, NATO)</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Near Infrared Reduction Compliant</strong></td>
+      <td><span style="color: #d4a017;"><span class="footnote-ref">Probable<span class="footnote-tooltip">Probably because I can't find confirmation, except for updated webbing for the FILBE which is marketed as being NIR compliant. It may be newer production is NIR compliant as this wasn't important a decade ago.</span></span></span></td>
+      <td><span style="color: blue !important;">Confirmed</span></td>
+    </tr>
+    <tr>
+      <td><strong>NATO Stock Number (NSN)</strong></td>
+      <td>8465-01-600-7911</td>
+      <td>8465-58-002-0196</td>
+    </tr>
+  </tbody>
+</table>
+
+Note: Quick Release (QR) and Side Release (SR) are mentioned equivalently in this
+article. But for the technically minded, SR buckles are a specific type of QR 
+buckle.
 
 
 ## First Impressions
@@ -270,10 +399,12 @@ Below is a detailed specifications comparison of the FILBE vs Kahakka. Color cod
 (Note: 02/2026 - will update with comparison photos of the 2025 FILBE and 2024 Kahakka)
 
 <div style="margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(99, 179, 237, 0.08), rgba(139, 92, 246, 0.08)); border-radius: 8px; border-left: 4px solid #63b3ed;">
-
+<center>
 The first time I saw the Kahakka, side by side with the FILBE, I thought,
+<br>
+<br>
 "…and <i><b>this</b></i> is the difference between America and Europe."
-
+</center>
 </div>
 
 <div style="text-align: center;">
@@ -307,9 +438,9 @@ just with real life.
 Go from Europe to America and the world feels flattened and stretched wide. A
 "single lane" in American suburbia feels equivalent to a rural
 double lane in the European countryside.
-Come back and everything is tall and narrow, from ceiling heights to light posts.
-More generally, American products 
-are are <span class="hover-note" id="note1">heavier, bulkier, and more comfortable. European
+Come back to continental Europe and everything is tall and narrow, from 
+ceiling heights to light posts. More generally, American products 
+are <span class="hover-note" id="note1">heavier, bulkier, and more comfortable. European
 products are lighter, more economical, and spartan.</span>
 
 <div class="hover-box" id="box1">
@@ -355,11 +486,12 @@ and light. It is a precise pack.
 
 ## Overview
 
-Each aspect of the packs will be reviewed and compared in this section. Again the
-main considerations are for EDC (Everyday Carry), Combat Use (CU), and build quality.
+Each aspect of the packs will be reviewed and compared in this section 
+(i.e. comparments, buckles, zippers, etc.). The main considerations are
+for EDC (Everyday Carry) and Combat Use (CU). Build quality is discussed later,
+but mentioned where specifically appropriate. 
 
-
-Two terms worth highlight are Single Handed Usage (SHU) and Fine Motor Control (FMC).
+Two terms worth highlighting are <b>Single Handed Usage (SHU)</b> and <b>Fine Motor Control (FMC)</b>.
 These are important concepts in military applications (to me) because they 
 determine how readily a product can be used when injured (single handed usage case) 
 and/or when under extreme stress where fine motor control becomes reduced.
@@ -407,7 +539,8 @@ effect, the pack becomes a longer tube. Bottom access is challenging. My arm len
 is typical to that of a 6' or 183cm tall man. As an EDC example, putting the 
 Kahakka on cashier's counter and trying to put in groceries in an organized manner
 to maximize space usage and not crush anything, is actually really hard. I ultimately
-stopped using the Kahakka as an EDC mainly for this reason.
+stopped using the Kahakka as an EDC mainly for this reason. I couldn't get my
+<span class="footnote-ref">groceries without struggling.<span class="footnote-tooltip">And we know what those Aldi/Lidl cashiers are like!</span></span>
 
 One solution to this is often found in larger hiking packs with fold top lids. At
 the bottom, there is a zippered "sleeping bag section." However, when everything
@@ -418,7 +551,7 @@ ammunition, medical supply, etc. has made its way to the bottom or some unknown
 position. For this, the J-Zip on the FILBE is far more convenient.
 
 However, one redemption of the implementation in the Kahakka's fold top lid is a
-a plastic insert in the lower lip (towards bottom of picture below). This little
+plastic insert in the lower lip (towards bottom of picture below). This little
 flexible piece does the job of keeping the mouth of the lid open and <span class="footnote-ref">squared.<span class="footnote-tooltip"> I know it's a rectangle, but "rectangled" doesn't read as smoothly as a verb </span></span>
 There is however a seam on this lower lip which is sharp and seems to catch a lot.
 I was concerned how this seam would hold up in time, but after more than a year it
@@ -439,13 +572,13 @@ visible in my photo.
 I am not a fan of elastic tensioning because these materials eventually "dry out,"
 losing their elasticity and ability to do their job.
 
-There is one particular grievances I have asked the Kahakka - its internal PU 
+There is one particular grievances I have against the Kahakka - its internal PU 
 coating. This is a great idea to increase weather resistance. But, this particular
 coating is a hunter's green (i.e. very dark green). I know not if this was intentional,
-such as a carry over from procurement specifications for the M20. Explcitly, to
-reduce any potential of an offending light signature leaking from inside the main
-compartment at night. But ultimately, this dark coating makes locating anything,
-even on a sunny day, frustrating. 
+such as a carry over from procurement specifications for the M20. For example,
+it might be a deliberate decision to reduce any potential of an offending light
+signature leaking from inside the main compartment at night. But ultimately, 
+this dark coating makes locating anything, even on a sunny day, frustrating. 
 
 My constructive advice would have be to use a lighter material to reflect light
 further down the cavity, and if needed, use a darker coating only at the very top,
@@ -458,16 +591,17 @@ and/or on the outer pouches, for concealment.
 
 
 In comparison, the FILBE has simple but more developed organization. A zippered
-mesh pocket sit at. It is very easy to access, even just opening the main J-Zip
-slightly, and it's easy to see what's inside due to the mesh covering. I have 
-found this particular useful for EDC and travel for items like keys and IDs.
+mesh pocket hands at the top front. It is very easy to access, even just opening the main J-Zip
+slightly, and allows you to see what's inside due to the mesh covering. I have 
+found this particularly useful for EDC and travel for items like keys and IDs.
 
-The FILBE features a radio comparment, which can be used to hold hydration
+The FILBE features a radio comparment, which can be used to hold
 a hydration bladder. Unlike the Kahakka, it does not have locking anchors for the
 bladder, presumably because these would get in the way of the radio. In my own
 experience with the FILBE and a water bladder, the lack of anchors makes little
 difference. The radio pouch features a strap with buckle, something which is
-preferred over the elastic of the Kahakka's elastic band.
+preferred over the elastic of the Kahakka's elastic band (the buckle is not
+going to wear out).
 
 Both the Kahakka and FILBE have exit slots for water bladder tubes (or radio 
 antennae for the later). I heavily prefer the flap coverings that Savotta has used. 
@@ -477,21 +611,22 @@ by Velcro and part of the top carrying handle. Despite rarely using these, they
 show great wear at this stage. Their top placement makes them less than ideal 
 for inclement weather, but this may be a necessity for the intended radios antennas.
 
-The FILBE also features 2 internal side pockets or "canteen" pouches. One is 
-the "Baguette holder", a long pocket tube seen in the folder below. The second 
+The FILBE also features 2 internal side pockets or "canteen" pouches which I
+have personally named as follows. One is the "Baguette holder", a long pocket
+tube seen in the folder below. The second 
 is the "Grenade holder" on the other side. It's not clear to me what either is 
 explicitly for. The Baguette holder, besides holding baguettes, is useful for 
 cables, chargers, and dongles as an EDC. Speaking of baguettes, another benefit 
 of the J zipper, is being able to partially close the pack, while having extended 
-object secured in the main compartment (like a baguette). As for the Grenade holder,
+objects secured in the main compartment (like a baguette). As for the Grenade holder,
 I've found little utility for it except for rolled socks. 
 
 Finally, the main compartment also features a zipper for access to the plastic 
 rear panel, just above the radio pouch. This is actually an additional
 "compartment." In the past I've used this pouch to store documents and 
 hide back-up cash while traveling as the zipper goes unnoticed. It is strange
-that a zipper was incorporated here instead of a material as it would've likely
-lowered production cost and weight.
+that a zipper was incorporated here instead of a flap, or even no opening at all
+as it would've likely lowered production cost and weight.
 
 <div style="flex: 1; text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/img_20241012_135510-3.jpg" alt="Image 2" style="width: 100%; height: auto;">
@@ -546,7 +681,7 @@ the pack is closed can make storage and retrieval harder.
 The promotional video for the [Kahakka 25L](https://youtu.be/M3rsKZi5hmE?t=15) 
 shows them pulling out a pair of binoculars. The key to accessing the
 compartment is therefore by using an additional hand to pull the external layer 
-and top <span class="footnote-ref">stringer<span class="footnote-tooltip">A <i>stringer</i> is the assembly of on side of a zipper. That is, the fabric tape and the attached teeth.</span></span> upward. This means single handed use is more difficult.
+and top <span class="footnote-ref">stringer<span class="footnote-tooltip">A <i>stringer</i> is the assembly of one side of a zipper. That is, the fabric tape and the attached teeth for either the top or bottom row.</span></span> upward. This means single handed use is more difficult.
 
 <div style="text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/img_20241012_141023.jpg" alt="Patch pocket" style="max-width: 75%; height: auto; display: block; margin: 0 auto;">
@@ -557,7 +692,7 @@ At first I was quite nervous about putting anything small or important inside,
 such as keys or ID, because the zipper is close to the bottom of the pocket, and my
 initial testing found items were likely to spill out. My +1 year of experience
 though has found this is be less probable than on first appearance, but one must
-remain mindful. It is the easiest pocket to access on the Kahakka but the least
+remain mindful. It is the easiest pocket to access on the Kahakka but the 
 least secured. 
 
 Personally, I would like to see the zipper moved 2-3cm (~1") higher.
@@ -565,12 +700,14 @@ This would mean the fabric overhang would start just at the top of the velcro
 patch on the lid.
 
 For those wondering, the [Medium sized Savotta Rain Cover](https://www.savotta.fi/products/backpack-cover) 
-fits inside but consumes the volume. You can still put some minor items in, but
-at the risk of them being pulled out unintentionally. As a side note the Savotta's
-rain cover fits the Kahakka quite well, though it is a big baggy. This does
-permit covering the pack comfortably, even if the side pouches are full utilized.
-Savotta now sells a 30L rain cover which would be more ideal for those interested
-in a slim line look (or for infrared protection).
+fits perfectlly inside this compartment but consumes nearly all the volume. 
+You can still put some minor items in, but
+at the risk of them being pulled out unintentionally when retrieving the cover.
+As a side note, the Savotta's
+rain cover fits the Kahakka quite well, though it is a big baggy. This bagginess
+does however mean it will comfortably cover the pack, even with fully utilized side
+pouches. Savotta now sells a 30L rain cover which would be more ideal for those interested
+in a slim line look (or for infrared rating).
 
 
 The second zipper pocket is a <span class="footnote-ref">flat pocket<span class="footnote-tooltip">A flat pocket is one which does not contain its own volume, but consumes volume from another compartment. In this case, the volume comes from the main compartment. </span></span> on the front of the pack. 
@@ -621,7 +758,9 @@ chargers, etc. I often used this to hold water as well, as it is easier access
 than the main compartment when using bottles instead of a bladder.
 
 I wouldn't change a thing about this, except maybe to make the mesh pocket have
-a double-slider.
+a double-slider. I just want to reiterate, it is a deceptively small (i.e. seems
+small but is surprising large), and I am always impressed just how much can be
+fit inside.
 
 <div style="text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/img_20241012_135441.jpg" alt="FILBE Front Pocket" style="max-width: 75%; height: auto; display: block; margin: 0 auto;">
@@ -696,7 +835,7 @@ certainly worth while.
     <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">FILBE QR buckle, and spare fixed buckle</p>
   </div>
   <div style="width: 50%; text-align: center;">
-    <img src="/images/articles/design-review/filbe-kahakka/Kahakka-quick-release.png" alt="Bottom of the Kahakka" style="width: 100%; height: auto;">
+    <img src="/images/articles/design-review/filbe-kahakka/kahakka-quick-release.png" alt="Bottom of the Kahakka" style="width: 100%; height: auto;">
     <p style="margin-top: 5px; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Difficult to determine, but the M20 also appears to not have a QR buckle.</p>
   </div>
 </div>
@@ -713,7 +852,10 @@ buckle. This is my first experience with a Berg buckle - and I love it. This is
 a perfect solution for an item which is supposed to be used during high stress
 environments. Even though standard QR buckles can be opened single-handled,
 a Berg buckle requires less fine motor control, and can also be easily opened
-while wearing winter gloves. 
+while wearing winter gloves. The devil's advocate in me does say that a Berg
+buckle could be more difficult to unclip in the prone position but I believe this
+is more of a chaotic neutral feature (sometimes good, sometimes bad - but equally
+so).
 
 <div style="text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/hip-straps.jpg" alt="Kahakka Strap on top of FILBE strap" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
@@ -734,7 +876,7 @@ The benefit of this later design is more real-estate for extra storaga on the
 Kahakka - either between the straps and the front of the pack, or even beneath
 the lid. However, this fact is limited by the relatively short length of the 
 straps (69.5 cm or 27.36") relative to the max volume of the pack. Without a
-custom adjustment, as will be explained shortly, I was unable to strap a
+custom adjustment, as will be explained shortly, I was not even able to strap a
 3-season duvet sleeping bag (a typical size, smaller than a rugby ball).
 
 An additional concern and area for improvement is that the SR buckles on these 
@@ -774,18 +916,19 @@ opposite. They can be clasped with 1 hand, but <i>always</i> need 2 hands to
 unhook. Or rather a hand and a finger, the finger lifting up the PALS webbing to
 let the hook slide away.
 
-For combat and stressful situations, I stand by that unloading is more important
+For combat and stressful situations, I firmly hold the belief that unloading is more important
 than loading, and the one handed unbuckling (SR buckle) is more useful than the one handed
 hooking (G-hook). Even if one should disagree with this, there is one more thing
 to consider. Though the G-hook can be attached single handely, it is very difficult 
 to tighten single handedly. Compared to the SR buckles, the adjustment on the 
 G-hooks is an exercise in patience. 
 
-I believe Savotta is aware of this drawback, and chose their design explicitly
+I believe Savotta is aware of this drawback, and chose this updated design explicitly
 for two reasons. First, the main compartment is acessed via
 SR buckles, and not G-hooks. In other words, faster access is provided to the 
 main compartment where it might really be needed. I would even bet 2-fingers
-of Kyrö whiskey that this was learnings from the Ukraine war. The second reason is an
+of Kyrö whiskey that this was learnings from the Ukraine war as the older M20
+military pack features G-Hooks for the main compartment. The second reason is an
 inspection of the G-hook reveals that the center bar (that which the fabric 
 strap wraps around), is bent in an S-shape, in an orthogonal direction to the 
 plane of the buckle. In other words, it creates 2 small, curved rises, and I
@@ -830,6 +973,8 @@ reminds from a security of supply perspective.
 From Savotta's site, "The Kahakkas are rugged indeed, but we have not sacrificed functionality, nor dumbed down the design, for the sake of durability."
 
 #### Conclusion
+
+
 
 <br>
 <br>
