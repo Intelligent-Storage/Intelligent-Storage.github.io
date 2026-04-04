@@ -583,7 +583,7 @@ is no worse for wear.
 
 <div style="text-align: center;">
   <img src="/images/articles/design-review/filbe-kahakka/img_20241012_140744.jpg" alt="Plastic Insert on bottom lip" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
-  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Plastic Insert on bottom lip keeps opening squared. Seam on bottom is "rough" where there is a 45 degree in the stitching.</p>
+  <p style="margin-top: 5px; margin-bottom: 1.5rem; font-size: 0.9em; color: var(--dark-olive); font-style: italic;">Plastic Insert on bottom lip keeps opening squared. Seam on bottom is "rough" where there is a 45 degree in the stiching.</p>
 </div>
 
 #### Main Compartment Organization
@@ -1488,7 +1488,6 @@ production time.
 Of course there are some other changes, but these are minor in comparison, and
 the imagined decision trade-offs can leave me convinced they should remain 
 as they are.
-
 <b>I think the Kahakka 25L is a good pack. I think it can be made into a great one.</b>
 
 And, I am planning to do that in my <a href="/projects/gear/Kahakka-mailli-1">my current project, found here (NOTE: not yet published)</a>.
@@ -1497,3 +1496,36 @@ Concering the FILBE, a pack will only be as good as well as it can be
 manufactured. It might have, in my opinion the better design, but if it can't
 hold up, then it becomes a liability, which can be lethal in combat.
 
+<script>
+document.querySelectorAll('.hover-note').forEach(function(note) {
+  var boxId = note.id.replace('note', 'box');
+  var box = document.getElementById(boxId);
+  if (!box) return;
+
+  var hideTimer = null;
+
+  function showBox() {
+    clearTimeout(hideTimer);
+    var rect = note.getBoundingClientRect();
+    var boxHeight = box.offsetHeight;
+    box.style.left = rect.left + 'px';
+    box.style.top = (rect.top - boxHeight - 8) + 'px';
+    box.classList.add('visible');
+  }
+
+  function startHide() {
+    hideTimer = setTimeout(function() {
+      box.classList.remove('visible');
+    }, 200);
+  }
+
+  function cancelHide() {
+    clearTimeout(hideTimer);
+  }
+
+  note.addEventListener('mouseenter', showBox);
+  note.addEventListener('mouseleave', startHide);
+  box.addEventListener('mouseenter', cancelHide);
+  box.addEventListener('mouseleave', startHide);
+});
+</script>
