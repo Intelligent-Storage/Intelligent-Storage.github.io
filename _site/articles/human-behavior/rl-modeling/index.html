@@ -104,11 +104,21 @@
     
       
         
+          <a class="sidebar-nav-item" href="http://localhost:4000/page2/">Home</a>
+        
+      
+    
+      
+        
       
     
       
         
           <a class="sidebar-nav-item" href="http://localhost:4000/projects/">Projects</a>
+        
+      
+    
+      
         
       
     
@@ -199,102 +209,78 @@
       </div>
 
       <div class="container content">
-        <div class="page">
-  <h1 style="text-align: center; margin-bottom: 1rem;">✦ Reinforcement Learning and Human Behavior</h1>
-  
+        <div class="post">
+  <h1 class="post-title">Reinforcement Learning and Human Behavior</h1>
+  <span class="post-date"></span>
   <p style="text-align: center; font-size: 1.1em; margin-bottom: 3rem; color: #6a6a5a;">
-    Exploring reinforcement learning and human behavior modeling
-  </p>
+  Exploring reinforcement learning and human behavior modeling
+</p>
 
-  <div class="posts-list">
+<div class="posts-list">
+  
+  
     
     
-      
-      
-        <article class="topic-post">
-          <h2 class="topic-post-title">
-            <a href="/2024/02/22/Introduction-to-RL/">1 - Introduction to Reinforcement Learning and Human Behavior</a>
-          </h2>
-          <time class="topic-post-date">February 22, 2024</time>
-          
-          
-            <div class="topic-post-excerpt">
-              <p>This writing experiment had first been intended to exemplify a rigorous approach towards dissecting current issues, exploring scientific mysteries, and thought testing ideas to a level that only written work can, for the ultimate purpose of improvement. I recently had the privilege of attending a conference which was both a change of routines, and an awareness refresher for my own circular behaviors. And that is this article’s theme: understanding self-behavior.</p>
-
-
-            </div>
-          
-          
-          <a href="/2024/02/22/Introduction-to-RL/" class="read-more-link">Read article →</a>
-        </article>
-      
+      <article class="topic-post">
+        <h2 class="topic-post-title">
+          <a href="/2024/02/22/Introduction-to-RL/">1 - Introduction to Reinforcement Learning and Human Behavior</a>
+        </h2>
+        <time class="topic-post-date">February 22, 2024</time>
+      </article>
     
-  </div>
-
+  
 </div>
 
 <style>
   .posts-list {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
   }
-
+  
   .topic-post {
-    background: var(--soft-white);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--retro-pink);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px dotted rgba(212, 165, 71, 0.4);
+    transition: all 0.2s ease;
   }
-
+  
+  .topic-post:hover {
+    padding-left: 1rem;
+    background: rgba(212, 165, 71, 0.05);
+  }
+  
   .topic-post-title {
-    margin: 0 0 0.5rem 0;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    flex: 1;
   }
-
+  
   .topic-post-title a {
     color: var(--dark-olive);
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
   }
-
+  
   .topic-post-title a:hover {
     color: var(--retro-pink);
-    border-bottom: 2px solid var(--retro-pink);
   }
-
+  
   .topic-post-date {
-    display: block;
-    font-size: 0.9rem;
-    color: #8a8a7a;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-
-  .topic-post-excerpt {
-    line-height: 1.7;
-    color: var(--dark-olive);
-    margin-bottom: 1rem;
-  }
-
-  .read-more-link {
-    display: inline-block;
-    color: var(--retro-pink);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-  }
-
-  .read-more-link:hover {
-    border-bottom: 2px solid var(--retro-pink);
+    font-size: 0.85rem;
+    color: #999;
+    margin-left: 2rem;
+    white-space: nowrap;
   }
 </style>
+
+</div>
+
+
+
       </div>
     </div>
 

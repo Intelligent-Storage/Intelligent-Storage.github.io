@@ -1,0 +1,75 @@
+---
+layout: post
+title: "Self Change"
+permalink: /projects/self-change/
+tag: self-change
+---
+
+<p style="text-align: center; font-size: 1.1em; margin-bottom: 3rem; color: #6a6a5a;">
+  Exploring personal transformation and growth
+</p>
+
+<div class="posts-list">
+  {% assign topic_posts = site.tags[page.tag] %}
+  {% if topic_posts and topic_posts.size > 0 %}
+    {% assign sorted_posts = topic_posts | sort: 'date' %}
+    {% for post in sorted_posts %}
+      <article class="topic-post">
+        <h2 class="topic-post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <time class="topic-post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+      </article>
+    {% endfor %}
+  {% else %}
+    <div style="text-align: center; padding: 3rem; color: #6a6a5a; font-style: italic;">
+      <p>No posts yet. Check back soon!</p>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .posts-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .topic-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px dotted rgba(212, 165, 71, 0.4);
+    transition: all 0.2s ease;
+  }
+  
+  .topic-post:hover {
+    padding-left: 1rem;
+    background: rgba(212, 165, 71, 0.05);
+  }
+  
+  .topic-post-title {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    flex: 1;
+  }
+  
+  .topic-post-title a {
+    color: var(--dark-olive);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .topic-post-title a:hover {
+    color: var(--retro-pink);
+  }
+  
+  .topic-post-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-left: 2rem;
+    white-space: nowrap;
+  }
+</style>
